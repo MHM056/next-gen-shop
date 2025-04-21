@@ -1,26 +1,201 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* :where([class^="ri-"])::before { content: "\f3c2"; } */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #0A0A0F;
+  color: #fff;
+}
+
+.glassmorphic {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-border {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
+    0 0 20px rgba(0, 240, 255, 0.3),
+    0 0 30px rgba(0, 240, 255, 0.1);
+}
+
+.neon-text {
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.8),
+    0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  background: linear-gradient(90deg, #00F0FF, #9D4EDD);
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00F0FF;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(10, 10, 15, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background: #00F0FF;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #0A0A0F;
+  clip-path: polygon(40% 60%, 80% 20%, 100% 40%, 40% 100%, 0% 60%, 20% 40%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 15, 0.8);
+  transition: .4s;
+  border-radius: 34px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #00F0FF;
+}
+
+input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00F0FF, #9D4EDD);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00F0FF, #9D4EDD);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00F0FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rounded-button {
+  border-radius: 12px;
+}
+
+.btn-glow {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.9), 0 0 25px rgba(0, 240, 255, 0.6);
+  filter: brightness(1.2);
+}
+
+.btn-outline-glow {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+}
+
+.btn-outline-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5), 0 0 25px rgba(0, 240, 255, 0.3);
+  filter: brightness(1.2);
+}
+
+.neon-text {
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.8),
+    0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+input[type="text"]:hover {
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
 }
