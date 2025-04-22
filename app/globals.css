@@ -1,6 +1,8 @@
 @import "tailwindcss";
+@import url("https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css");
 
-/* :where([class^="ri-"])::before { content: "\f3c2"; } */
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
 
 body {
   font-family: 'Inter', sans-serif;
