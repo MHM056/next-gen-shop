@@ -106,10 +106,13 @@ i {
 
 .search-icon {
     position: absolute;
-    right: 0px;
-    font-size: 15px;
-    color: #00F0FF;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: cyan;
+    font-size: 20px;
     pointer-events: none;
+
 }
 
 /* Navigation */
@@ -155,7 +158,7 @@ main {
 
 .description .cyan-button:hover,
 .description .cyan-button:focus {
-    opacity: 0.9;
+    background-color: #0defffac;
     box-shadow: 0 0 100px rgba(0, 240, 255, 0.5);
     transition: 0.2s ease-in;
 }
@@ -303,7 +306,8 @@ main {
 }
 
 .subscribe button:hover {
-    opacity: 0.9;
+    background-color: #0defffac;
+    /* opacity: 0.9; */
     transition: 0.1s ease-in;
 }
 
@@ -329,7 +333,7 @@ footer i {
 
 footer .links i {
     color: rgba(172, 172, 172, 0.982);
-    font-size: 22px;
+    font-size: 18px;
     border: 1px solid rgba(172, 172, 172, 0.982);
     border-radius: 50%;
     padding: 0.5em;
@@ -388,6 +392,7 @@ footer section h1 {
     padding-right: 0.3em;
     color: rgba(128, 128, 128, 0.982)
 }
+
 .rights li {
     color: rgba(128, 128, 128, 0.982)
 }
