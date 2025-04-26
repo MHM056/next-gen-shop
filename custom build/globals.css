@@ -433,3 +433,65 @@ footer section h1 {
 }
 
 /* Footer */
+
+
+/* ADMIN */
+.admin {
+    padding: 0 1m;
+}
+
+.admin nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.admin nav button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 60px;
+    text-align: center;
+}
+
+.admin-logout {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.admin-logout i {
+    font-size: 18px;
+    padding: 0;
+}
+
+.admin-logout span,
+.admin nav div span {
+    color: white;
+}
+
+.logout {
+    background-color: rgba(0, 115, 115, 0.415);
+    border-radius: 0.5em;
+    width: 120px;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.logout:hover {
+    background-color: rgba(0, 115, 115, 0.564);
+}
+
+.logout a {
+    color: cyan;
+}
+
+.logout i {
+    padding: 0 0.1em;
+    font-size: 18px;
+    color: cyan;
+}
+
+/* ADMIN */
