@@ -586,7 +586,9 @@ footer section h1 {
     color: rgba(0, 255, 255, 0.728);
 }
 
-.top-products {
+.top-products,
+.quick-actions,
+.recent-activities {
     color: white;
     border: 1px solid rgba(128, 128, 128, 0.401);
     border-radius: 1em;
@@ -608,11 +610,15 @@ footer section h1 {
 }
 
 .product-card {
-    padding: 0.5em 0;
+    padding-top: 0.7em;
 }
 
 .product-card span {
     color: cyan;
+}
+
+.product-card h4 {
+    font-size: 16px;
 }
 
 .product-card p {
@@ -622,6 +628,51 @@ footer section h1 {
 .product-card-name {
     display: flex;
     gap: 0.8em;
+}
+
+.actions-and-activities {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.quick-actions,
+.recent-activities {
+    width: 50%;
+    height: auto;
+}
+
+.quick-actions h3 {
+    padding-bottom: 1em;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    gap: 1em;
+}
+
+.actions button {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.401);
+    border-radius: 1em;
+    padding: 2em 1em 1em 1em;
+    margin: 0.5em 0;
+    width: 100%;
+    background-color: #07070C;
+    text-align: left;
+}
+.actions i {
+    padding: 0;
+    font-size: 30px;
+    color: cyan;
+}
+
+.actions button:hover {
+    border-color: cyan;
+    transition: 0.2s ease-in;
 }
 
 /* ADMIN */
