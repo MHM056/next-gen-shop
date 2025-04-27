@@ -132,7 +132,7 @@
         <nav>
             <div>
                 <button><i class="ri-close-line"></i></button>
-                <span>Admin Panel</span>
+                <span class="title">Admin Panel</span>
             </div>
             <div>
                 <div class="admin-logout">
@@ -148,41 +148,42 @@
             </div>
         </nav>
         <div>
-            <div>
-                <div>
+            <div class="general-view">
+                <div class="total-card">
                     <div>
-                        <h3 class="text-lg font-medium">Total Sales</h3>
-                        <i class="ri-money-dollar-circle-line text-primary ri-2x"></i>
+                        <h3>Total Sales</h3>
+                        <i class="ri-money-dollar-circle-line ri-2x"></i>
                     </div>
-                    <p class="text-3xl font-bold text-primary mb-2">$124,563</p>
-                    <p class="text-sm text-gray-400">+12.5% from last month</p>
+                    <p class="total-sum">$124,563</p>
+                    <p class="sum-details">+12.5% from last month</p>
                 </div>
-                <div>
+                <div class="total-card">
                     <div>
-                        <h3 class="text-lg font-medium">Total Orders</h3>
+                        <h3>Total Orders</h3>
                         <i class="ri-shopping-cart-line text-primary ri-2x"></i>
                     </div>
-                    <p class="text-3xl font-bold text-primary mb-2">1,432</p>
-                    <p class="text-sm text-gray-400">+8.2% from last month</p>
+                    <p class="total-sum">1,432</p>
+                    <p class="sum-details">+8.2% from last month</p>
                 </div>
-                <div>
+                <div class="total-card">
                     <div>
                         <h3 class="text-lg font-medium">Total Products</h3>
                         <i class="ri-box-3-line text-primary ri-2x"></i>
                     </div>
-                    <p class="text-3xl font-bold text-primary mb-2">286</p>
-                    <p class="text-sm text-gray-400">+15 new products</p>
+                    <p class="total-sum">286</p>
+                    <p class="sum-details">+15 new products</p>
                 </div>
-                <div>
+                <div class="total-card">
                     <div>
                         <h3 class="text-lg font-medium">Total Users</h3>
                         <i class="ri-group-line text-primary ri-2x"></i>
                     </div>
-                    <p class="text-3xl font-bold text-primary mb-2">8,549</p>
+                    <p class="total-sum">8,549</p>
                     <p class="text-sm text-gray-400">+5.3% from last month</p>
                 </div>
             </div>
-            <div>
+            <!-- Sales Analytics and Revenue Distributions -->
+            <!-- <div class="sales-revenue">
                 <div>
                     <div>
                         <h3 class="text-lg font-medium">Sales Analytics</h3>
@@ -201,83 +202,65 @@
                         </button>
                     </div>
                 </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                <div class="glassmorphic rounded-xl p-6 lg:col-span-2">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-lg font-medium">Recent Orders</h3>
-                        <button class="text-primary hover:text-primary/80 transition-colors">
-                            View All
-                        </button>
+            </div> -->
+            <div>
+                <div class="recent-orders">
+                    <div>
+                        <h3>Recent Orders</h3>
+                        <button>View All</button>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
+                    <div>
+                        <table>
                             <thead>
-                                <tr class="border-b border-white/10">
-                                    <th class="text-left py-3 text-sm font-medium text-gray-400">
-                                        Order ID
-                                    </th>
-                                    <th class="text-left py-3 text-sm font-medium text-gray-400">
-                                        Customer
-                                    </th>
-                                    <th class="text-left py-3 text-sm font-medium text-gray-400">
-                                        Product
-                                    </th>
-                                    <th class="text-left py-3 text-sm font-medium text-gray-400">
-                                        Amount
-                                    </th>
-                                    <th class="text-left py-3 text-sm font-medium text-gray-400">
-                                        Status
-                                    </th>
-                                    <th class="text-left py-3 text-sm font-medium text-gray-400">
-                                        Date
-                                    </th>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b border-white/10">
-                                    <td class="py-3 text-sm">#ORD-7843</td>
-                                    <td class="py-3 text-sm">Emily Parker</td>
-                                    <td class="py-3 text-sm">Quantum Earbuds Pro</td>
-                                    <td class="py-3 text-sm">$249.99</td>
-                                    <td class="py-3 text-sm">
-                                        <span
-                                            class="bg-green-500/20 text-green-500 px-2 py-1 rounded-full text-xs">Completed</span>
+                                <tr>
+                                    <td>#ORD-7843</td>
+                                    <td>Emily Parker</td>
+                                    <td>Quantum Earbuds Pro</td>
+                                    <td>$249.99</td>
+                                    <td>
+                                        <span>Completed</span>
                                     </td>
-                                    <td class="py-3 text-sm">2025-04-25</td>
+                                    <td>2025-04-25</td>
                                 </tr>
-                                <tr class="border-b border-white/10">
-                                    <td class="py-3 text-sm">#ORD-7842</td>
-                                    <td class="py-3 text-sm">Michael Chen</td>
-                                    <td class="py-3 text-sm">Vortex Pro Controller</td>
-                                    <td class="py-3 text-sm">$179.99</td>
-                                    <td class="py-3 text-sm">
-                                        <span
-                                            class="bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded-full text-xs">Pending</span>
+                                <tr>
+                                    <td>#ORD-7842</td>
+                                    <td>Michael Chen</td>
+                                    <td>Vortex Pro Controller</td>
+                                    <td>$179.99</td>
+                                    <td>
+                                        <span>Pending</span>
                                     </td>
-                                    <td class="py-3 text-sm">2025-04-25</td>
+                                    <td>2025-04-25</td>
                                 </tr>
-                                <tr class="border-b border-white/10">
-                                    <td class="py-3 text-sm">#ORD-7841</td>
-                                    <td class="py-3 text-sm">Sarah Johnson</td>
-                                    <td class="py-3 text-sm">Nexus Smartwatch X2</td>
-                                    <td class="py-3 text-sm">$399.99</td>
-                                    <td class="py-3 text-sm">
-                                        <span
-                                            class="bg-blue-500/20 text-blue-500 px-2 py-1 rounded-full text-xs">Processing</span>
+                                <tr>
+                                    <td>#ORD-7841</td>
+                                    <td>Sarah Johnson</td>
+                                    <td>Nexus Smartwatch X2</td>
+                                    <td>$399.99</td>
+                                    <td>
+                                        <span>Processing</span>
                                     </td>
-                                    <td class="py-3 text-sm">2025-04-24</td>
+                                    <td>2025-04-24</td>
                                 </tr>
-                                <tr class="border-b border-white/10">
-                                    <td class="py-3 text-sm">#ORD-7840</td>
-                                    <td class="py-3 text-sm">David Wilson</td>
-                                    <td class="py-3 text-sm">Prism AR Glasses</td>
-                                    <td class="py-3 text-sm">$599.99</td>
-                                    <td class="py-3 text-sm">
-                                        <span
-                                            class="bg-green-500/20 text-green-500 px-2 py-1 rounded-full text-xs">Completed</span>
+                                <tr>
+                                    <td>#ORD-7840</td>
+                                    <td>David Wilson</td>
+                                    <td>Prism AR Glasses</td>
+                                    <td>$599.99</td>
+                                    <td>
+                                        <span>Completed</span>
                                     </td>
-                                    <td class="py-3 text-sm">2025-04-24</td>
+                                    <td>2025-04-24</td>
                                 </tr>
                             </tbody>
                         </table>

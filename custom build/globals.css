@@ -29,8 +29,6 @@ h1 {
 
 p {
     color: rgb(198, 198, 198);
-    font-size: 25px;
-    padding: 1em 0;
 }
 
 /* Navigation */
@@ -159,12 +157,13 @@ main {
 }
 
 .description {
-    padding: 9em 10em 8em 3em;
+    padding: 7em 10em 8em 3em;
     width: 50%;
 }
 
 .description p {
-    font-size: 24px;
+    font-size: 22px;
+    padding: 1em 0em 2em 0em;
     line-height: normal;
 }
 
@@ -293,9 +292,11 @@ main {
 
 .newsletter p {
     font-size: 20px;
+    padding-bottom: 1.5em;
 }
 
 #subscribe {
+    padding: 1em 0;
     font-size: 14px;
 }
 
@@ -437,14 +438,15 @@ footer section h1 {
 
 /* ADMIN */
 .admin {
-    padding: 0 1m;
+    padding: 0 1em;
 }
 
 .admin nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.401);
 }
 
 .admin nav button {
@@ -455,7 +457,11 @@ footer section h1 {
     width: 60px;
     text-align: center;
 }
-
+.admin .title {
+    color: cyan;
+    font-size: 22px;
+    font-style: italic;
+}
 .admin-logout {
     display: flex;
     align-items: center;
@@ -492,6 +498,56 @@ footer section h1 {
     padding: 0 0.1em;
     font-size: 18px;
     color: cyan;
+}
+
+.general-view {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    padding: 2em 0;
+}
+
+.total-card {
+    border: 1px solid rgba(128, 128, 128, 0.401);
+    background-color: rgba(128, 128, 128, 0.124);
+    color: white;
+    border-radius: 1em;
+    width: 25%;
+    height: auto;
+    padding: 1em 2em;
+}
+
+.total-card h3 {
+    font-size: 20px;
+}
+
+.total-card i {
+    color: cyan;
+    padding: 0;
+}
+
+.total-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-sum {
+    color: cyan;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.sum-details {
+    font-size: 16px;
+    padding: 0;
+}
+
+.recent-orders {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.401);
+    border-radius: 1em;
+    padding: 1.5em;
 }
 
 /* ADMIN */
