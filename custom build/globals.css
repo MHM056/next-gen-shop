@@ -457,11 +457,13 @@ footer section h1 {
     width: 60px;
     text-align: center;
 }
+
 .admin .title {
     color: cyan;
     font-size: 22px;
     font-style: italic;
 }
+
 .admin-logout {
     display: flex;
     align-items: center;
@@ -548,6 +550,29 @@ footer section h1 {
     border: 1px solid rgba(128, 128, 128, 0.401);
     border-radius: 1em;
     padding: 1.5em;
+    width: 60%;
+}
+
+.recent-orders th {
+    padding: 1em 0;
+    text-align: left;
+}
+
+.recent-orders td {
+    border-top: 1px solid rgba(128, 128, 128, 0.401);
+    padding: 0.4em 1em 0.4em 0em;
+}
+
+.recent-orders-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-orders-title button {
+    color: cyan;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
 }
 
 /* ADMIN */
