@@ -570,6 +570,28 @@ footer section h1 {
     padding: 0.4em 1em 0.4em 0em;
 }
 
+.status {
+    border-radius: 1em;
+    font-size: 14px;
+    padding: 0.3em 1em;
+}
+
+.completed {
+    color: #34ff7f;
+    background-color: #0D2D1D;
+}
+
+.pending {
+    color: #ffc20b;
+    background-color: #352A0B;
+}
+
+.processing {
+    color: #3b86ff;
+    background-color: #12203B;
+}
+
+
 .recent-orders-title {
     display: flex;
     justify-content: space-between;
@@ -664,15 +686,17 @@ footer section h1 {
     background-color: #07070C;
     text-align: left;
 }
+
+.actions button:hover {
+    border-color: cyan;
+    transition: 0.2s ease-in;
+
+}
 .actions i {
     padding: 0;
     font-size: 30px;
     color: cyan;
 }
 
-.actions button:hover {
-    border-color: cyan;
-    transition: 0.2s ease-in;
-}
 
 /* ADMIN */
