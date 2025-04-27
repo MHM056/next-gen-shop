@@ -511,7 +511,7 @@ footer section h1 {
 
 .total-card {
     border: 1px solid rgba(128, 128, 128, 0.401);
-    background-color: rgba(128, 128, 128, 0.124);
+    background-color: #07070C;
     color: white;
     border-radius: 1em;
     width: 25%;
@@ -545,17 +545,24 @@ footer section h1 {
     padding: 0;
 }
 
+.orders-and-products {
+    display: flex;
+    gap: 1.5em;
+}
+
 .recent-orders {
     color: white;
     border: 1px solid rgba(128, 128, 128, 0.401);
     border-radius: 1em;
     padding: 1.5em;
     width: 60%;
+    background-color: #07070C;
 }
 
 .recent-orders th {
     padding: 1em 0;
     text-align: left;
+    color: #9CA3AF;
 }
 
 .recent-orders td {
@@ -568,11 +575,53 @@ footer section h1 {
     justify-content: space-between;
 }
 
-.recent-orders-title button {
+.orders-and-products button {
     color: cyan;
     background-color: transparent;
     border: none;
     font-size: 16px;
+}
+
+.orders-and-products button:hover {
+    color: rgba(0, 255, 255, 0.728);
+}
+
+.top-products {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.401);
+    border-radius: 1em;
+    padding: 1.5em;
+    width: 40%;
+    background-color: #07070C;
+}
+
+.top-products img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.top-products-title,
+.product-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card {
+    padding: 0.5em 0;
+}
+
+.product-card span {
+    color: cyan;
+}
+
+.product-card p {
+    font-size: 14px;
+}
+
+.product-card-name {
+    display: flex;
+    gap: 0.8em;
 }
 
 /* ADMIN */
