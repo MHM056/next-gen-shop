@@ -36,9 +36,42 @@ p {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 0.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.logo {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: #00faff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 5px #00faff,
+        0 0 10px #00faff,
+        0 0 20px #00faff,
+        0 0 40px #00cfff;
+    animation: flicker 2s infinite alternate;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    color: #9f00ff;
+    text-shadow:
+        0 0 5px #9f00ff,
+        0 0 10px #9f00ff,
+        0 0 20px #9f00ff,
+        0 0 40px #ff00e0;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 nav ul {
@@ -68,14 +101,6 @@ i:hover {
 }
 
 .user-nav div span {
-    /* position: relative;
-    right: 0;
-    top: 40%;
-    transform: translateY(-400%);
-    color: cyan;
-    font-size: 20px;
-    pointer-events: none; */
-
     position: absolute;
     top: 25px;
     background-color: #00faff;
@@ -142,7 +167,7 @@ i {
 /* Main =================================================================================*/
 main {
     /* background: url("https://public.readdy.ai/ai/img_res/1cd20f210a7471c9605fadedb9502475.jpg"); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* background-size: 100% 120%; */
     display: flex;
 }
@@ -187,12 +212,6 @@ main {
 }
 
 .shopping-text {
-    /* background: linear-gradient(to right, #04EBFE, #6F7DE7, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background-position 0.5s ease;
-    background-position: left; */
-
     background: linear-gradient(90deg, #00cfff, #ff00ff);
     background-size: 200%;
     background-position: left;
@@ -203,9 +222,6 @@ main {
 }
 
 .shopping-text:hover {
-    /* background: linear-gradient(to left, #04EBFE, #6F7DE7, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     background-position: right;
 }
 
@@ -248,20 +264,37 @@ main {
 .explore-button:focus {
     opacity: 0.9;
     background-color: rgba(0, 238, 255, 0.116);
-    /* box-shadow: 0 0 100px rgba(0, 240, 255, 0.5); */
     transition: 0.2s ease-in;
 }
 
 /* Main */
 
-/* Newsletter */
-.newsletter {
-    /* background-image: url('https://public.readdy.ai/ai/img_res/4b48fa76a5daae6f6fa0356e0cf819d7.jpg'); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-size: 100% 100%; */
+/* Featured Products */
+.featured-products {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3em;
 }
 
+.featured-products .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-products .top h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.featured-products .top span {
+    background: linear-gradient(to right, #04EBFE, #6F7DE7, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Featured Products */
+
+/* Newsletter */
 .newsletter img {
     position: absolute;
     object-fit: none;
@@ -332,15 +365,13 @@ main {
 
 .subscribe button:hover {
     background-color: #0defffac;
-    /* opacity: 0.9; */
     transition: 0.1s ease-in;
 }
-
 /* Newsletter */
 
 /* Footer */
 footer {
-    padding: 0em 1em;
+    padding: 0em 3em;
 }
 
 footer li {
@@ -397,7 +428,11 @@ footer section li {
 }
 
 .links a {
-    padding-right: 1em;
+    padding-right: 0.7em;
+}
+
+.links p {
+    padding: 1.2em 0;
 }
 
 footer section h1 {
@@ -409,7 +444,7 @@ footer section h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2em;
+    padding:2em 0;
     border-top: 1px solid rgba(128, 128, 128, 0.407);
 }
 
@@ -432,9 +467,7 @@ footer section h1 {
     color: cyan;
     transition: 0.3s ease-in;
 }
-
 /* Footer */
-
 
 /* ADMIN */
 .admin {
@@ -749,4 +782,5 @@ footer section h1 {
     background-color: #28173A;
     color: #A855F7;
 }
+
 /* ADMIN */
