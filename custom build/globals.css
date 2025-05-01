@@ -453,7 +453,7 @@ main {
     font-weight: bold;
 }
 
-.product-card .price .discount {
+.discount { /* g */
     text-decoration: line-through;
     color: gray;
     font-size: 0.9rem;
