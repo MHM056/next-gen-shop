@@ -447,13 +447,14 @@ main {
     gap: 10px;
 }
 
-.product-card .price span:first-child {
+.current-price {
     color: cyan;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-.discount { /* g */
+.previous-price {
+    /* g */
     text-decoration: line-through;
     color: gray;
     font-size: 0.9rem;
@@ -678,6 +679,7 @@ footer section h1 {
     color: cyan;
     transition: 0.3s ease-in;
 }
+
 /* Footer */
 
 /* Item Details */
@@ -716,7 +718,7 @@ footer section h1 {
     width: 100%;
     height: auto;
     border-radius: inherit;
-    
+
 }
 
 .thumbnails {
@@ -773,7 +775,43 @@ footer section h1 {
 
 .item-info p {
     font-size: 16px;
+    padding-bottom: 1em;
 }
+
+.item-info .current-price {
+    font-size: 1.4rem;
+}
+
+.item-info .previous-price {
+    font-size: 1.1rem;
+}
+
+.item-details-prices {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.discount-sticker {
+    color: cyan;
+    background-color: #0B3B44;
+    border-radius: 1em;
+    font-size: 14px;
+    padding: 0.2em 0.7em;
+}
+
+.color-header,
+.stock-status {
+    color: white;
+}
+
+.color-header {
+    padding-bottom: 1em;
+}
+
+
+
 /* Item Details */
 
 /* ADMIN */
