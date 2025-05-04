@@ -810,7 +810,42 @@ footer section h1 {
     padding-bottom: 1em;
 }
 
+.item-colors {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 1em;
+}
 
+.color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.color.cyan {
+    background-color: #00f0ff;
+}
+
+.color.purple {
+    background-color: #a34fe3;
+}
+
+.color.dark {
+    background-color: #1F2937;
+}
+
+.color.white {
+    background-color: rgb(187, 187, 187);
+}
+
+.color.selected {
+    border: 2px solid white;
+    /* box-shadow: 0 0 0 2px #00f0ff; */
+}
 
 /* Item Details */
 
