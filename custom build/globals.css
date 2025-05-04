@@ -745,6 +745,7 @@ footer section h1 {
 
 .item-info {
     padding-left: 2em;
+    width: 50%;
 }
 
 .review-field {
@@ -844,9 +845,122 @@ footer section h1 {
 
 .color.selected {
     border: 2px solid white;
-    /* box-shadow: 0 0 0 2px #00f0ff; */
 }
 
+.stock-status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock-status span {
+    color: cyan;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #1c1c24;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 60%;
+    background: linear-gradient(to right, #00f0ff, #e019e3);
+    border-radius: 4px 0 0 4px;
+    transition: width 0.4s ease;
+}
+
+#units-left {
+    font-size: 14px;
+    padding-top: 0.2em;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #0e0e15;
+    width: fit-content;
+    gap: 10px;
+}
+
+.quantity-selector button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.quantity-selector button i {
+    padding: 0;
+}
+
+.quantity-selector input {
+    width: 20px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    -moz-appearance: textfield;
+}
+
+.user-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.cart-button {
+    width: 100%;
+    border-radius: 1em;
+    border:none;
+    background-color: cyan;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.cart-button:hover {
+    background-color: rgba(0, 255, 255, 0.767);
+    transition: 0.1s ease-in;
+}
+
+.cart-button i {
+    color: black;
+    font-size: 14px;
+    padding: 0.5em;
+}
+
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wishlist-share {
+    display: flex;
+    gap: 1em;
+    color: rgb(198, 198, 198);
+    padding: 1.5em 0;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wishlist-share i {
+    color: rgb(198, 198, 198);
+    padding: 0.1em;
+    font-size: 14px;
+}
+
+.wishlist-share i:hover {
+    color: cyan;
+}
 /* Item Details */
 
 /* ADMIN */

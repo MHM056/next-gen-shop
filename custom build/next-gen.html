@@ -370,36 +370,30 @@
                                 <span>In Stock</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 65%"></div>
+                                <div class="progress-fill"></div>
                             </div>
-                            <p class="text-sm text-gray-400 mt-2">Only 7 units left</p>
+                            <p id="units-left">Only 7 units left</p>
                         </div>
-                        <div class="flex items-center mb-8">
-                            <div class="flex items-center border border-white/20 rounded-lg">
-                                <button
-                                    class="w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors whitespace-nowrap">
+                        <div class="user-actions">
+                            <div class="quantity-selector">
+                                <button>
                                     <i class="ri-subtract-line"></i>
                                 </button>
-                                <input type="number" value="1"
-                                    class="w-12 h-12 bg-transparent border-none text-center text-white" min="1">
-                                <button
-                                    class="w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors whitespace-nowrap">
+                                <input type="number" value="1" min="1">
+                                <button>
                                     <i class="ri-add-line"></i>
                                 </button>
                             </div>
-                            <button
-                                class="ml-4 flex-1 bg-primary text-black px-8 py-3 rounded-button font-medium hover:bg-primary/80 transition-colors neon-border whitespace-nowrap">
+                            <button class="cart-button">
                                 <i class="ri-shopping-cart-line mr-2"></i> Add to Cart
                             </button>
                         </div>
-                        <div class="flex items-center space-x-6 text-sm text-gray-400">
-                            <div class="flex items-center cursor-pointer hover:text-primary transition-colors">
-                                <i class="ri-heart-line mr-2"></i>
-                                <span>Add to Wishlist</span>
+                        <div class="wishlist-share">
+                            <div class="wishlist">
+                                <i class="ri-heart-line mr-2"> Add to Wishlist</i>
                             </div>
-                            <div class="flex items-center cursor-pointer hover:text-primary transition-colors">
-                                <i class="ri-share-line mr-2"></i>
-                                <span>Share</span>
+                            <div>
+                                <i class="ri-share-line"> Share</i>
                             </div>
                         </div>
                     </div>
