@@ -920,7 +920,7 @@ footer section h1 {
 .cart-button {
     width: 100%;
     border-radius: 1em;
-    border:none;
+    border: none;
     background-color: cyan;
     font-size: 16px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
@@ -958,9 +958,28 @@ footer section h1 {
     font-size: 14px;
 }
 
-.wishlist-share i:hover {
+.wishlist-btn,
+.share-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #9e9e9e;
+    transition: color 0.3s ease;
+}
+
+.wishlist-btn i,
+.wishlist-btn span,
+.share-btn i,
+.share-btn span {
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.wishlist-btn:hover,
+.share-btn:hover {
     color: cyan;
 }
+
 /* Item Details */
 
 /* ADMIN */
