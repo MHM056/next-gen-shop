@@ -70,7 +70,6 @@
             </div>
         </div>
         <div class="product-list">
-            <!-- Product 1 -->
             <div class="product-card">
                 <div>
                     <div class="product-image">
@@ -111,7 +110,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Product 2 -->
             <div class="product-card">
                 <div>
                     <div class="product-image">
@@ -191,7 +189,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Product 4 -->
             <div class="product-card">
                 <div>
                     <div class="product-image">
@@ -509,40 +506,35 @@
         </div>
         <!-- Products Grid -->
         <div class="products-grid">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold">All Products <span class="text-gray-400 text-lg">(48)</span></h2>
-                <div class="flex items-center space-x-4">
-                    <div class="relative">
-                        <select
-                            class="appearance-none glassmorphic rounded-lg py-2 pl-4 pr-8 text-white border border-white/20 focus:border-primary focus:outline-none cursor-pointer">
+            <div class="grid-header">
+                <h2>All Products <span>(48)</span></h2>
+                <div class="ui-actions">
+                    <div>
+                        <select>
                             <option>Sort by: Featured</option>
                             <option>Price: Low to High</option>
                             <option>Price: High to Low</option>
                             <option>Newest First</option>
                             <option>Best Rated</option>
                         </select>
-                        <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                            <i class="ri-arrow-down-s-line text-white"></i>
+                        <div>
+                            <i class="ri-arrow-down-s-line"></i>
                         </div>
                     </div>
-                    <div class="flex border border-white/20 rounded-lg">
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-l-lg whitespace-nowrap">
+                    <div>
+                        <button>
                             <i class="ri-layout-grid-line"></i>
                         </button>
-                        <button
-                            class="w-10 h-10 flex items-center justify-center text-white hover:text-primary transition-colors rounded-r-lg whitespace-nowrap">
+                        <button>
                             <i class="ri-list-check"></i>
                         </button>
                     </div>
-                    <button id="openLoginModal"
-                        class="bg-primary text-black px-6 py-2 rounded-button font-medium hover:bg-primary/80 transition-colors whitespace-nowrap">
-                        <i class="ri-login-circle-line mr-2"></i>Login
+                    <button>
+                        <i class="ri-login-circle-line"></i>Login
                     </button>
                 </div>
             </div>
             <div class="product-section">
-                <!-- Product 1 -->
                 <div class="product-card compact">
                     <div>
                         <div class="product-image">
@@ -583,7 +575,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 2 -->
                 <div class="product-card compact">
                     <div>
                         <div class="product-image">
@@ -623,7 +614,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 3 -->
                 <div class="product-card compact">
                     <div>
                         <div class="product-image">
@@ -664,128 +654,118 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 4 -->
-                <div class="product-card glassmorphic rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://public.readdy.ai/ai/img_res/7ae7d8c140bd97d8143cc292ec2f7900.jpg"
-                            alt="Prism AR Glasses" class="w-full h-48 object-cover object-top">
-                        <div class="absolute top-4 right-4 flex space-x-2">
-                            <div
-                                class="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
+                <div class="product-card compact">
+                    <div>
+                        <div class="product-image">
+                            <img src="https://public.readdy.ai/ai/img_res/9be19a26d3db56501ebaeb06250b1884.jpg"
+                                alt="Prism AR Glasses" />
+                        </div>
+                        <div>
+                            <div>
                                 <i class="ri-heart-line text-white"></i>
                             </div>
-                            <div
-                                class="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
+                            <div>
                                 <i class="ri-eye-line text-white"></i>
                             </div>
                         </div>
-                        <div
-                            class="absolute top-4 left-4 bg-primary/80 text-black text-xs font-bold px-3 py-1 rounded-full">
-                            LIMITED</div>
+                        <div>LIMITED</div>
                     </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
-                            <div class="flex text-primary text-sm">
+                    <div>
+                        <div class="item-stars">
+                            <div class="star-icons">
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-half-fill"></i>
                             </div>
-                            <span class="text-xs text-gray-400 ml-2">(76)</span>
+                            <p>(76)</p>
                         </div>
-                        <h3 class="text-base font-medium mb-1">Prism AR Glasses</h3>
-                        <p class="text-xs text-gray-400 mb-3">Augmented reality with holographic interface</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-primary font-bold text-lg">$599.99</span>
+                        <h3>Prism AR Glasses</h3>
+                        <p>Augmented reality with holographic interface</p>
+                        <div>
+                            <div class="price">
+                                <span class="current-price">$599.99</span>
                             </div>
-                            <button
-                                class="w-8 h-8 flex items-center justify-center bg-primary text-black rounded-full hover:bg-primary/80 transition-colors whitespace-nowrap">
+                            <button>
                                 <i class="ri-shopping-cart-line"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Product 5 -->
-                <div class="product-card glassmorphic rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://public.readdy.ai/ai/img_res/e75b8b0f83b4645838809162da803e75.jpg"
-                            alt="Echo Speaker" class="w-full h-48 object-cover object-top">
-                        <div class="absolute top-4 right-4 flex space-x-2">
-                            <div
-                                class="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
-                                <i class="ri-heart-line text-white"></i>
-                            </div>
-                            <div
-                                class="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
-                                <i class="ri-eye-line text-white"></i>
-                            </div>
+                <div class="product-card compact">
+                    <div>
+                        <div class="product-image">
+                            <img src="https://public.readdy.ai/ai/img_res/e75b8b0f83b4645838809162da803e75.jpg"
+                            alt="Echo Speaker" />
                         </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
-                            <div class="flex text-primary text-sm">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-line"></i>
-                            </div>
-                            <span class="text-xs text-gray-400 ml-2">(89)</span>
-                        </div>
-                        <h3 class="text-base font-medium mb-1">Echo Quantum Speaker</h3>
-                        <p class="text-xs text-gray-400 mb-3">360° spatial audio with voice control</p>
-                        <div class="flex justify-between items-center">
+                        <div>
                             <div>
-                                <span class="text-primary font-bold text-lg">$199.99</span>
-                                <span class="text-gray-500 text-xs line-through ml-2">$249.99</span>
-                            </div>
-                            <button
-                                class="w-8 h-8 flex items-center justify-center bg-primary text-black rounded-full hover:bg-primary/80 transition-colors whitespace-nowrap">
-                                <i class="ri-shopping-cart-line"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 6 -->
-                <div class="product-card glassmorphic rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://public.readdy.ai/ai/img_res/bdd7a8f163a2826e991ddaedf74286a8.jpg"
-                            alt="Vortex Mouse" class="w-full h-48 object-cover object-top">
-                        <div class="absolute top-4 right-4 flex space-x-2">
-                            <div
-                                class="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
                                 <i class="ri-heart-line text-white"></i>
                             </div>
-                            <div
-                                class="w-8 h-8 flex items-center justify-center bg-black/50 rounded-full cursor-pointer hover:bg-primary/20 transition-colors">
+                            <div>
                                 <i class="ri-eye-line text-white"></i>
                             </div>
                         </div>
-                        <div
-                            class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">
-                            POPULAR</div>
                     </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
-                            <div class="flex text-primary text-sm">
+                    <div>
+                        <div class="item-stars">
+                            <div class="star-icons">
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-half-fill"></i>
                             </div>
-                            <span class="text-xs text-gray-400 ml-2">(112)</span>
+                            <p>(89)</p>
                         </div>
-                        <h3 class="text-base font-medium mb-1">Vortex Precision Mouse</h3>
-                        <p class="text-xs text-gray-400 mb-3">16K DPI with customizable weights</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-primary font-bold text-lg">$129.99</span>
+                        <h3>Echo Quantum Speaker</h3>
+                        <p>360° spatial audio with voice control</p>
+                        <div>
+                            <div class="price">
+                                <span class="current-price">$199.99</span>
+                                <span class="previous-price">$249.99</span>
                             </div>
-                            <button
-                                class="w-8 h-8 flex items-center justify-center bg-primary text-black rounded-full hover:bg-primary/80 transition-colors whitespace-nowrap">
+                            <button>
+                                <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card compact">
+                    <div>
+                        <div class="product-image">
+                            <img src="https://public.readdy.ai/ai/img_res/bdd7a8f163a2826e991ddaedf74286a8.jpg"
+                            alt="Vortex Mouse" />
+                        </div>
+                        <div>
+                            <div>
+                                <i class="ri-heart-line text-white"></i>
+                            </div>
+                            <div>
+                                <i class="ri-eye-line text-white"></i>
+                            </div>
+                        </div>
+                        <div>POPULAR</div>
+                    </div>
+                    <div>
+                        <div class="item-stars">
+                            <div class="star-icons">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                            <p>(112)</p>
+                        </div>
+                        <h3>Vortex Precision Mouse</h3>
+                        <p>16K DPI with customizable weights</p>
+                        <div>
+                            <div class="price">
+                                <span class="current-price">$129.99</span>
+                            </div>
+                            <button>
                                 <i class="ri-shopping-cart-line"></i>
                             </button>
                         </div>

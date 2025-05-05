@@ -996,6 +996,75 @@ footer section h1 {
     width: 80%;
 }
 
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2em;
+}
+
+.grid-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: white;
+}
+
+.grid-header h2 span {
+    color: gray;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.ui-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ui-actions > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.ui-actions select {
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.ui-actions > div:first-child > div {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.ui-actions > div:nth-child(2) {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ui-actions button {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.ui-actions button:hover {
+    background-color: #333;
+}
+
 .product-section {
     display: flex;
     flex-direction: row;
@@ -1004,12 +1073,11 @@ footer section h1 {
 }
 
 .product-card.compact {
-    width: 350px;
+    width: 351px;
 }
 
 .product-card.compact .product-image {
     aspect-ratio: 6 / 4;
-    /* Shorter image section */
 }
 
 .product-card.compact h3 {
