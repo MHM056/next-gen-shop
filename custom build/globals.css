@@ -160,6 +160,7 @@ i {
     pointer-events: none;
 
 }
+
 /* Navigation ===================================== */
 
 /* Main  ========================================== */
@@ -261,6 +262,7 @@ main {
     background-color: rgba(0, 238, 255, 0.116);
     transition: 0.2s ease-in;
 }
+
 /* Main  ========================================== */
 
 /* Featured Products ============================== */
@@ -316,7 +318,6 @@ main {
 }
 
 .product-card {
-    height: 550px;
     width: 350px;
     font-family: sans-serif;
     color: white;
@@ -326,11 +327,9 @@ main {
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.05);
     transition: transform 0.3s ease;
     transform-origin: bottom center;
-    /* makes it grow upward */
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .product-card:hover {
@@ -345,17 +344,17 @@ main {
 }
 
 .product-image {
-    position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
     background: black;
+    flex-shrink: 0;
 }
 
 .product-card img {
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
+    display: block;
 }
 
 /* Icons */
@@ -398,6 +397,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex-grow: 1;
 }
 
 .item-stars {
@@ -495,6 +495,7 @@ main {
     margin: 2em 0;
     font-size: 16px;
 }
+
 /* Featured Products ============================== */
 
 
@@ -570,6 +571,7 @@ main {
     background-color: #0defffac;
     transition: 0.1s ease-in;
 }
+
 /* Newsletter ===================================== */
 
 /* Footer  ======================================== */
@@ -670,6 +672,7 @@ footer section h1 {
     color: cyan;
     transition: 0.3s ease-in;
 }
+
 /* Footer ======================================== */
 
 /* Item Details  ==================================*/
@@ -969,6 +972,7 @@ footer section h1 {
 .share-btn:hover {
     color: cyan;
 }
+
 /* Item Details  ================================== */
 
 /* All Products =================================== */
@@ -979,7 +983,8 @@ footer section h1 {
     margin: 2em 4em;
 }
 
-.sidebar, .products-grid {
+.sidebar,
+.products-grid {
     border: 1px solid grey;
 }
 
@@ -991,14 +996,39 @@ footer section h1 {
     width: 80%;
 }
 
-.products-grid .product-card {
-    height: 500px;
-    width: 350px;
+.product-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
-.products-grid .product-image {
-    height: 80%;
+.product-card.compact {
+    width: 300px;
 }
+
+.product-card.compact .product-image {
+    aspect-ratio: 6 / 4;
+    /* Shorter image section */
+}
+
+.product-card.compact h3 {
+    font-size: 0.8rem;
+}
+
+.product-card.compact p {
+    font-size: 0.65rem;
+}
+
+.product-card.compact .current-price {
+    font-size: 0.9rem;
+}
+
+.product-card.compact button {
+    width: 34px;
+    height: 34px;
+}
+
 /* All Products ================================== */
 
 /* ADMIN ========================================= */
@@ -1314,4 +1344,5 @@ footer section h1 {
     background-color: #28173A;
     color: #A855F7;
 }
+
 /* ADMIN ========================================= */
