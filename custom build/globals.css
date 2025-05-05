@@ -979,7 +979,7 @@ footer section h1 {
 .all-products {
     display: flex;
     flex-direction: row;
-    gap: 2em;
+    gap: 1.5em;
     margin: 2em 4em;
 }
 
@@ -1004,7 +1004,7 @@ footer section h1 {
 }
 
 .product-card.compact {
-    width: 300px;
+    width: 350px;
 }
 
 .product-card.compact .product-image {
