@@ -406,10 +406,10 @@
         <div class="sidebar">
             <div class="filters">
                 <h3>Filters</h3>
-                <div>
+                <div class="price-slider">
                     <h4>Price Range</h4>
-                    <input type="range" min="0" max="1000" value="500" />
-                    <div>
+                    <input type="range" min="0" max="1000" value="500" class="range-input" />
+                    <div class="price-range">
                         <span>$0</span>
                         <span>$500</span>
                         <span>$1000</span>
@@ -420,23 +420,23 @@
                 <h4>Categories</h4>
                 <div>
                     <div>
-                        <input type="checkbox" id="cat1" />
+                        <input type="checkbox" id="cat1" class="checkbox" />
                         <label for="cat1">Headphones (24)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cat2" checked>
+                        <input type="checkbox" id="cat2" checked class="checkbox" />
                         <label for="cat2">Earbuds (18)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cat3" />
+                        <input type="checkbox" id="cat3" class="checkbox" />
                         <label for="cat3">Speakers (16)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cat4" />
+                        <input type="checkbox" id="cat4" class="checkbox" />
                         <label for="cat4">Microphones (9)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cat5" />
+                        <input type="checkbox" id="cat5" class="checkbox" />
                         <label for="cat5">Accessories (32)</label>
                     </div>
                 </div>
@@ -445,23 +445,23 @@
                 <h4>Brands</h4>
                 <div>
                     <div>
-                        <input type="checkbox" id="brand1" checked />
+                        <input type="checkbox" id="brand1" checked class="checkbox" />
                         <label for="brand1">Quantum (12)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="brand2" />
+                        <input type="checkbox" id="brand2" class="checkbox" />
                         <label for="brand2">Nexus (9)</label>
                     </div>
                     <div class="flex items-center">
-                        <input type="checkbox" id="brand3" />
+                        <input type="checkbox" id="brand3" class="checkbox" />
                         <label for="brand3">Vortex (14)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="brand4" />
+                        <input type="checkbox" id="brand4" class="checkbox" />
                         <label for="brand4">Nova (8)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="brand5" />
+                        <input type="checkbox" id="brand5" class="checkbox" />
                         <label for="brand5">Prism (6)</label>
                     </div>
                 </div>
@@ -770,28 +770,15 @@
                 </div>
             </div>
             <!-- Pagination -->
-            <div class="flex justify-center mt-12">
-                <div class="flex space-x-2">
-                    <button
-                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg text-white hover:border-primary hover:text-primary transition-colors whitespace-nowrap">
-                        <i class="ri-arrow-left-s-line"></i>
-                    </button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-lg whitespace-nowrap">1</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg text-white hover:border-primary hover:text-primary transition-colors whitespace-nowrap">2</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg text-white hover:border-primary hover:text-primary transition-colors whitespace-nowrap">3</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg text-white hover:border-primary hover:text-primary transition-colors whitespace-nowrap">
-                        <i class="ri-more-line"></i>
-                    </button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg text-white hover:border-primary hover:text-primary transition-colors whitespace-nowrap">8</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg text-white hover:border-primary hover:text-primary transition-colors whitespace-nowrap">
-                        <i class="ri-arrow-right-s-line"></i>
-                    </button>
+            <div class="pagination">
+                <div>
+                    <button><i class="ri-arrow-left-s-line"></i></button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button><i class="ri-more-line"></i></button>
+                    <button>8</button>
+                    <button><i class="ri-arrow-right-s-line"></i></button>
                 </div>
             </div>
         </div>
