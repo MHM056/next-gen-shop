@@ -379,7 +379,7 @@ main {
 }
 
 /* Badge (NEW, LIMITED, etc.) */
-.product-card>div:first-child>div:nth-child(3) {
+.sticker {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -389,6 +389,11 @@ main {
     padding: 4px 10px;
     border-radius: 999px;
     font-weight: 600;
+}
+
+.sticker.purple {
+    background-color: #9D4EDD;
+    color: white;
 }
 
 /* Content section */
@@ -1275,7 +1280,7 @@ footer section h1 {
     display: flex;
     justify-content: center;
     gap: 0.5em;
-    padding: 1em;
+    padding: 2em;
 }
 
 .pagination button {
