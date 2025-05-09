@@ -1,50 +1,35 @@
-import Link from "next/link";
-import IconWithBadge from "./IconWithBadge";
+import styles from "./Header.module.css";
 
 export default function Header() {
     return (
-        <header className="bg-black/30 backdrop-blur-md text-white px-6 py-4 flex items-center justify-between rounded-xl shadow-md">
-            {/* Logo */}
-            <div className="text-2xl font-bold text-[#00F0FF] neon-text">logo</div>
-
-            {/* Nav Links */}
-            <nav className="hidden md:flex space-x-8 text-sm font-medium">
-                <Link href="/" className="hover:text-[#00F0FF] p-5 transition-colors duration-300">
-                    Home
-                </Link>
-                <Link href="/shop" className="hover:text-[#00F0FF] p-5 transition-colors duration-300">
-                    Shop
-                </Link>
-                <Link href="/collections" className="hover:text-[#00F0FF] p-5 transition-colors duration-300">
-                    Collections
-                </Link>
-                <Link href="/about" className="hover:text-[#00F0FF] p-5 transition-colors duration-300">
-                    About
-                </Link>
-                <Link href="/contact" className="hover:text-[#00F0FF] p-5 transition-colors duration-300">
-                    Contact
-                </Link>
-            </nav>
-
-            {/* Search + Icons */}
-            <div className="flex items-center gap-6">
-                {/* Search Bar */}
-                <div className="relative">
-                    <input
-                        type="text"
-                        placeholder="Search products..."
-                        className="bg-[#0A0A0F] border border-[#00F0FF] rounded-full px-4 py-2 text-sm w-56 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00F0FF] transition"
-                    />
-                    <span className="absolute right-3 top-2.5 text-[#00F0FF]">
-                        <i className="ri-search-line"></i>
-                    </span>
+        <header className={styles.header}>
+            <nav className={styles.nav}>
+                <div className={styles.logo}>
+                    <span>N</span><span>G</span>
                 </div>
-
-                {/* Icons */}
-                <div className="flex items-center gap-4 text-xl relative">
-                    <IconWithBadge icon="ri-user-line" />
-                    <IconWithBadge icon="ri-heart-line" count={3} />
-                    <IconWithBadge icon="ri-shopping-cart-line" count={2} />
+                <ul className={styles.ul}>
+                    <li><a className={styles.a} href="/">Home</a></li>
+                    <li><a className={styles.a} href="/shop">Shop</a></li>
+                    <li><a className={styles.a} href="/collections">Collections</a></li>
+                    <li><a className={styles.a} href="/about">About</a></li>
+                    <li><a className={styles.a} href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div className={styles["user-nav"]}>
+                <div className={styles["search-container"]}>
+                    <input type="text" placeholder="Search products..." className={styles["search-input"]} />
+                    <i className={`ri-search-line ${styles["search-icon"]} ${styles.i}`}></i>
+                </div>
+                <div>
+                    <i className={`ri-user-line ${styles.i}`}></i>
+                    <span>1</span>
+                </div>
+                <div>
+                    <i className={`ri-shopping-cart-line ${styles.i}`}></i>
+                    <span>2</span>
+                </div>
+                <div>
+                    <i className={`ri-heart-line ${styles.i}`}></i>
                 </div>
             </div>
         </header>
