@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import CustomHead from "@/components/CustomHead";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <CustomHead />
-      <body className="mini-h-screen">
+      <body>
         <Header />
         {children}
       </body>
