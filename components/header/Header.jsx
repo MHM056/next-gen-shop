@@ -4,8 +4,8 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <div className={styles.logo}>
-                    <span>N</span><span>G</span>
+                <div className="logo">
+                    <span>Next</span><span>Gen</span>
                 </div>
                 <ul className={styles.ul}>
                     <li><a className={styles.a} href="/">Home</a></li>
