@@ -1,0 +1,99 @@
+.footer {
+    padding: 0em 3em;
+}
+
+.listed-item {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5em;
+    color: rgba(128, 128, 128, 0.982);
+}
+
+.contact-icon {
+    color: cyan;
+    font-size: 16px;
+    padding-right: 1em;
+}
+
+.links i {
+    color: rgba(172, 172, 172, 0.982);
+    font-size: 18px;
+    border: 1px solid rgba(172, 172, 172, 0.982);
+    border-radius: 50%;
+    padding: 0.5em;
+}
+
+.links i:hover {
+    color: cyan;
+    border-color: cyan;
+    transition: 0.3s ease-in;
+}
+
+.footer-p {
+    font-size: 18px;
+    color: rgba(128, 128, 128, 0.982)
+}
+
+.section {
+    display: flex;
+    padding-top: 3em;
+
+}
+
+.links,
+.shop,
+.customer-service,
+.contact,
+.rights {
+    width: 25%;
+    padding-right: 2em;
+}
+
+.links {
+    max-width: 35%;
+    padding-right: 2em;
+}
+
+.links a {
+    padding-right: 0.7em;
+}
+
+.links p {
+    padding: 1.2em 0;
+}
+
+.footer-h1 {
+    font-size: 18px;
+    padding-bottom: 1.5em;
+}
+
+.rights {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 2em 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.407);
+}
+
+.rights i {
+    padding-right: 0.3em;
+    color: rgba(128, 128, 128, 0.982)
+}
+
+.rights li {
+    color: rgba(128, 128, 128, 0.982)
+}
+
+.rights ul {
+    display: flex;
+    gap: 1em;
+}
+
+.shop li:hover,
+.customer-service li:hover {
+    color: cyan;
+    transition: 0.3s ease-in;
+}
