@@ -5,8 +5,8 @@ export default function Footer() {
         <footer className={styles.footer}>
             <section className={styles.section}>
                 <div className={styles.links}>
-                    <div className={styles.logo}>
-                        <span>N</span><span>G</span>
+                    <div className="logo">
+                        <span>Next</span><span>Gen</span>
                     </div>
                     <p className={styles["footer-p"]}>Experience the future of technology with our next-generation products designed for the modern
                         lifestyle.
@@ -48,13 +48,13 @@ export default function Footer() {
             </section>
             <br />
             <div className={styles.rights}>
-                <p className="copyright">© 2025 NextGen Shop. All rights reserved.</p>
+                <p className={styles["footer-p"]}>© 2025 NextGen Shop. All rights reserved.</p>
                 <ul>
                     <li className={styles["listed-item"]}><i className={`ri-visa-fill`}></i>Visa</li>
-                    <li className={styles["listed-item"]}><i className={`ri-mastercard-fill ${styles.icon}`}></i>Mastercard</li>
-                    <li className={styles["listed-item"]}><i className={`ri-paypal-fill ${styles.icon}`}></i>PayPal</li>
-                    <li className={styles["listed-item"]}><i className={`ri-apple-fill ${styles.icon}`}></i>Apple Pay</li>
-                    <li className={styles["listed-item"]}><i className={`ri-google-fill ${styles.icon}`}></i>Google Pay</li>
+                    <li className={styles["listed-item"]}><i className={`ri-mastercard-fill`}></i>Mastercard</li>
+                    <li className={styles["listed-item"]}><i className={`ri-paypal-fill`}></i>PayPal</li>
+                    <li className={styles["listed-item"]}><i className={`ri-apple-fill`}></i>Apple Pay</li>
+                    <li className={styles["listed-item"]}><i className={`ri-google-fill`}></i>Google Pay</li>
                 </ul>
             </div>
         </footer>
