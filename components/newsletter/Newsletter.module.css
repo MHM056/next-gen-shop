@@ -1,0 +1,71 @@
+.newsletter img {
+    position: absolute;
+    object-fit: none;
+    max-height: 300px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.container {
+    text-align: center;
+    padding: 2em 0em;
+}
+
+.container span {
+    background: linear-gradient(to right, #04EBFE, #6F7DE7, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.container p {
+    font-size: 20px;
+    padding-bottom: 1.5em;
+}
+
+.container p:last-child {
+    padding: 1em 0;
+    font-size: 14px;
+}
+
+.container input {
+    font-size: 16px;
+    padding: 15px 80px 15px 20px;
+    width: 400px;
+    border: 1px solid #00F0FF;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    opacity: 0.8;
+}
+
+.container input:focus,
+.container input:hover {
+    box-shadow: 0 0 60px rgba(0, 240, 255, 0.5);
+}
+
+.container button {
+    background-color: #00F0FF;
+    border: none;
+    transition: box-shadow 0.3s ease;
+    padding: 0.9em 2em;
+    border-radius: 9px;
+    font-size: 16px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+    margin-left: 0.5em;
+}
+
+.container button:hover {
+    background-color: #0defffac;
+    transition: 0.1s ease-in;
+}
