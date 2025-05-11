@@ -36,7 +36,7 @@
     background-position: right;
 }
 
-.cyan-button {
+.cyan-btn {
     background-color: #00F0FF;
     border: none;
     text-decoration: none;
@@ -48,14 +48,14 @@
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
 }
 
-.cyan-button:hover,
-.cyan-button:focus {
+.cyan-btn:hover,
+.cyan-btn:focus {
     background-color: #0defffac;
     box-shadow: 0 0 100px rgba(0, 240, 255, 0.5);
     transition: 0.2s ease-in;
 }
 
-.explore-button {
+.explore-btn {
     background-color: transparent;
     text-decoration: none;
     border: 1px solid #00F0FF;
@@ -68,8 +68,8 @@
     margin-left: 0.5em;
 }
 
-.explore-button:hover,
-.explore-button:focus {
+.explore-btn:hover,
+.explore-btn:focus {
     opacity: 0.9;
     background-color: rgba(0, 238, 255, 0.116);
     transition: 0.2s ease-in;
