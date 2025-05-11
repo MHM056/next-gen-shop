@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import Newsletter from "@/components/newsletter/Newsletter";
+import FeaturedProducts from "@/components/featured-products/FeaturedProducts";
 
 export default function Home() {
     return (
@@ -30,6 +31,7 @@ export default function Home() {
                     />
                 </div>
             </main>
+            <FeaturedProducts />
             <Newsletter />
         </>
     );
