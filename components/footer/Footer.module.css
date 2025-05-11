@@ -2,7 +2,7 @@
     padding: 0em 3em;
 }
 
-.listed-item {
+.footer li {
     color: white;
     list-style-type: none;
     display: flex;
@@ -11,7 +11,17 @@
     color: rgba(128, 128, 128, 0.982);
 }
 
-.contact-icon {
+.footer h1 {
+    font-size: 18px;
+    padding-bottom: 1.5em;
+}
+
+.footer p {
+    font-size: 18px;
+    color: rgba(128, 128, 128, 0.982)
+}
+
+.contact i {
     color: cyan;
     font-size: 16px;
     padding-right: 1em;
@@ -31,15 +41,9 @@
     transition: 0.3s ease-in;
 }
 
-.footer-p {
-    font-size: 18px;
-    color: rgba(128, 128, 128, 0.982)
-}
-
 .section {
     display: flex;
     padding-top: 3em;
-
 }
 
 .links,
@@ -62,11 +66,6 @@
 
 .links p {
     padding: 1.2em 0;
-}
-
-.footer-h1 {
-    font-size: 18px;
-    padding-bottom: 1.5em;
 }
 
 .rights {
