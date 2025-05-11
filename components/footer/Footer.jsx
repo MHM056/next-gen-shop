@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="logo">
                         <span>Next</span><span>Gen</span>
                     </div>
-                    <p className={styles["footer-p"]}>Experience the future of technology with our next-generation products designed for the modern
+                    <p>Experience the future of technology with our next-generation products designed for the modern
                         lifestyle.
                     </p>
                     <a><i className={`ri-facebook-fill ${styles.icon}`}></i></a>
@@ -17,44 +17,44 @@ export default function Footer() {
                     <a><i className={`ri-youtube-fill ${styles.icon}`}></i></a>
                 </div>
                 <div className={styles.shop}>
-                    <h1 className={styles["footer-h1"]}>Shop</h1>
+                    <h1>Shop</h1>
                     <ul>
-                        <li className={styles["listed-item"]}>All Products</li>
-                        <li className={styles["listed-item"]}>Featured Items</li>
-                        <li className={styles["listed-item"]}>New Arrivals</li>
-                        <li className={styles["listed-item"]}>Special Offers</li>
-                        <li className={styles["listed-item"]}>Coming Soon</li>
+                        <li>All Products</li>
+                        <li>Featured Items</li>
+                        <li>New Arrivals</li>
+                        <li>Special Offers</li>
+                        <li>Coming Soon</li>
                     </ul>
                 </div>
                 <div className={styles["customer-service"]}>
-                    <h1 className={styles["footer-h1"]}>Customer Service</h1>
+                    <h1>Customer Service</h1>
                     <ul>
-                        <li className={styles["listed-item"]}>Contact Us</li>
-                        <li className={styles["listed-item"]}>FAQs</li>
-                        <li className={styles["listed-item"]}>Shipping Policy</li>
-                        <li className={styles["listed-item"]}>Returns & Exchanges</li>
-                        <li className={styles["listed-item"]}>Warranty Information</li>
+                        <li>Contact Us</li>
+                        <li>FAQs</li>
+                        <li>Shipping Policy</li>
+                        <li>Returns & Exchanges</li>
+                        <li>Warranty Information</li>
                     </ul>
                 </div>
                 <div className={styles.contact}>
-                    <h1 className={styles["footer-h1"]}>Contact</h1>
+                    <h1>Contact</h1>
                     <ul>
-                        <li className={styles["listed-item"]}><i className={`ri-map-pin-line ${styles["contact-icon"]}`}></i>123 Future Avenue, Tech District, CA 90210, US</li>
-                        <li className={styles["listed-item"]}><i className={`ri-phone-line ${styles["contact-icon"]}`}></i>+1 (800) 123-4567</li>
-                        <li className={styles["listed-item"]}><i className={`ri-mail-line ${styles["contact-icon"]}`}></i>support@nextgenshop.com</li>
-                        <li className={styles["listed-item"]}><i className={`ri-timer-2-line ${styles["contact-icon"]}`}></i>24/7 Customer Support</li>
+                        <li><i className="ri-map-pin-line"></i>123 Future Avenue, Tech District, CA 90210, US</li>
+                        <li><i className="ri-phone-line"></i>+1 (800) 123-4567</li>
+                        <li><i className="ri-mail-line"></i>support@nextgenshop.com</li>
+                        <li><i className="ri-timer-2-line"></i>24/7 Customer Support</li>
                     </ul>
                 </div>
             </section>
             <br />
             <div className={styles.rights}>
-                <p className={styles["footer-p"]}>© 2025 NextGen Shop. All rights reserved.</p>
+                <p>© 2025 NextGen Shop. All rights reserved.</p>
                 <ul>
-                    <li className={styles["listed-item"]}><i className={`ri-visa-fill`}></i>Visa</li>
-                    <li className={styles["listed-item"]}><i className={`ri-mastercard-fill`}></i>Mastercard</li>
-                    <li className={styles["listed-item"]}><i className={`ri-paypal-fill`}></i>PayPal</li>
-                    <li className={styles["listed-item"]}><i className={`ri-apple-fill`}></i>Apple Pay</li>
-                    <li className={styles["listed-item"]}><i className={`ri-google-fill`}></i>Google Pay</li>
+                    <li><i className="ri-visa-fill"></i>Visa</li>
+                    <li><i className="ri-mastercard-fill"></i>Mastercard</li>
+                    <li><i className="ri-paypal-fill"></i>PayPal</li>
+                    <li><i className="ri-apple-fill"></i>Apple Pay</li>
+                    <li><i className="ri-google-fill"></i>Google Pay</li>
                 </ul>
             </div>
         </footer>
