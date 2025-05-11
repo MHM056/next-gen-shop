@@ -79,11 +79,12 @@
 
 .rights i {
     padding-right: 0.3em;
-    color: rgba(128, 128, 128, 0.982)
+    color: rgba(128, 128, 128, 0.982);
 }
 
 .rights li {
-    color: rgba(128, 128, 128, 0.982)
+    color: rgba(128, 128, 128, 0.982);
+    padding-bottom: 0;
 }
 
 .rights ul {
