@@ -16,10 +16,24 @@
     width: 50%;
 }
 
-.main-paragraph {
+.main p {
     font-size: 22px;
     padding: 1em 0em 2em 0em;
     line-height: normal;
+}
+
+.shopping-text {
+    background: linear-gradient(90deg, #00cfff, #ff00ff);
+    background-size: 200%;
+    background-position: left;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease;
+    margin: 0;
+}
+
+.shopping-text:hover {
+    background-position: right;
 }
 
 .cyan-button {
@@ -32,17 +46,6 @@
     border-radius: 9px;
     font-size: 16px;
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
-}
-
-
-.shopping-text {
-    background: linear-gradient(90deg, #00cfff, #ff00ff);
-    background-size: 200%;
-    background-position: left;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background-position 0.5s ease;
-    margin: 0;
 }
 
 .cyan-button:hover,
@@ -71,11 +74,6 @@
     background-color: rgba(0, 238, 255, 0.116);
     transition: 0.2s ease-in;
 }
-
-.shopping-text:hover {
-    background-position: right;
-}
-
 .item-preview {
     width: 50%;
     display: flex;

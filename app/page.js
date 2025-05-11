@@ -14,7 +14,7 @@ export default function Home() {
                 <h1>The Future of</h1>
                 <h1 className={styles["shopping-text"]}>Shopping</h1>
                 <h1>Is Here</h1>
-                <p className={styles["main-paragraph"]}>Experience next-generation e-commerce with our futuristic platform. Discover products that define
+                <p>Experience next-generation e-commerce with our futuristic platform. Discover products that define
                     tomorrow, today.
                 </p>
                 <a href="/shop" className={styles["cyan-button"]}>Shop Now</a>
