@@ -1,0 +1,313 @@
+.admin {
+    padding: 0 1em;
+}
+
+.admin nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.401);
+}
+
+.admin nav button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 60px;
+    text-align: center;
+}
+
+.title {
+    color: cyan;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.admin-logout {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.admin-logout i {
+    font-size: 18px;
+    padding-right: 0.5em;
+    color: white;
+}
+
+.admin-logout span,
+.admin nav div span {
+    color: white;
+}
+
+.logout {
+    background-color: rgba(0, 115, 115, 0.415);
+    border-radius: 0.5em;
+    width: 120px;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.logout:hover {
+    background-color: rgba(0, 115, 115, 0.564);
+}
+
+.logout a {
+    color: cyan;
+}
+
+.logout i {
+    padding-right: 0.5em;
+    font-size: 18px;
+    color: cyan;
+}
+
+.general-view {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    padding: 2em 0;
+}
+
+.total-card {
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    background-color: #07070C;
+    color: white;
+    border-radius: 1em;
+    width: 25%;
+    height: auto;
+    padding: 1em 2em;
+}
+
+.total-card h3 {
+    font-size: 20px;
+}
+
+.total-card i {
+    color: cyan;
+    padding: 0;
+}
+
+.total-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-sum {
+    color: cyan;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.sum-details {
+    font-size: 16px;
+    padding: 0;
+}
+
+.orders-and-products {
+    display: flex;
+    gap: 1.5em;
+}
+
+.recent-orders {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    padding: 1.5em;
+    width: 80%;
+    background-color: #07070C;
+}
+
+.recent-orders table {
+    width: 100%;
+}
+
+.recent-orders th {
+    padding: 1em 0;
+    text-align: left;
+    color: #9CA3AF;
+}
+
+.recent-orders td {
+    border-top: 1px solid rgba(128, 128, 128, 0.221);
+    padding: 0.4em 1em 0.4em 0em;
+}
+
+.status {
+    border-radius: 1em;
+    font-size: 14px;
+    padding: 0.3em 1em;
+}
+
+.completed {
+    color: #34ff7f;
+    background-color: #0D2D1D;
+}
+
+.pending {
+    color: #ffc20b;
+    background-color: #352A0B;
+}
+
+.processing {
+    color: #3b86ff;
+    background-color: #12203B;
+}
+
+
+.recent-orders-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orders-and-products button {
+    color: cyan;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.orders-and-products button:hover {
+    color: rgba(0, 255, 255, 0.728);
+}
+
+.top-products,
+.quick-actions,
+.recent-activities {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    padding: 1.5em;
+    width: 40%;
+    background-color: #07070C;
+}
+
+.top-products img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.top-products-title,
+.item-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-card {
+    padding-top: 0.7em;
+}
+
+.item-card span {
+    color: cyan;
+}
+
+.item-card h4 {
+    font-size: 16px;
+}
+
+.item-card p {
+    font-size: 14px;
+}
+
+.item-card-name {
+    display: flex;
+    gap: 0.8em;
+}
+
+.actions-and-activities {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.quick-actions,
+.recent-activities {
+    width: 50%;
+    height: auto;
+}
+
+.quick-actions h3 {
+    padding-bottom: 1em;
+}
+
+.quick-actions p {
+    padding-top: 0.5em;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    gap: 1em;
+}
+
+.actions button {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    padding: 2em 1em 1em 1em;
+    margin: 0.5em 0;
+    width: 100%;
+    background-color: #07070C;
+    text-align: left;
+}
+
+.actions button:hover {
+    border-color: cyan;
+    transition: 0.2s ease-in;
+
+}
+
+.actions i {
+    padding: 0;
+    font-size: 30px;
+    color: cyan;
+}
+
+.recent-activities i {
+    border-radius: 100%;
+    padding: 0.5em 0.5em;
+    font-size: 16px;
+}
+
+.activity {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding-top: 1em
+}
+
+.activity-title {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.activity-time {
+    font-size: 14px;
+}
+
+.order-icon {
+    background-color: #0D2D1C;
+    color: #21BE5B;
+}
+
+.user-icon {
+    background-color: #12203A;
+    color: #3A7FF1;
+}
+
+.discount-icon {
+    background-color: #382C0E;
+    color: #E9B208;
+}
+
+.product-icon {
+    background-color: #28173A;
+    color: #A855F7;
+}
