@@ -436,27 +436,27 @@
     transition: 0.1s ease-in;
 }
 
-.product-card .compact {
+.compact {
     width: 342px;
 }
 
-.product-card .compact .product-image {
+.compact .product-image {
     aspect-ratio: 6 / 4;
 }
 
-.product-card .compact h3 {
+.compact h3 {
     font-size: 0.8rem;
 }
 
-.product-card .compact p {
+.compact p {
     font-size: 0.65rem;
 }
 
-.product-card .compact .current-price {
+.compact .current-price {
     font-size: 0.9rem;
 }
 
-.product-card .compact button {
+.compact button {
     width: 34px;
     height: 34px;
 }

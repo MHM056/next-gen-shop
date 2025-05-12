@@ -32,23 +32,23 @@ export default function Shop() {
                     <div>
                         <div>
                             <input type="checkbox" id="cat1" className={styles.checkbox} />
-                            <label for="cat1">Headphones (24)</label>
+                            <label htmlFor="cat1">Headphones (24)</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="cat2" checked className={styles.checkbox} />
-                            <label for="cat2">Earbuds (18)</label>
+                            <input type="checkbox" id="cat2"  className={styles.checkbox} />
+                            <label htmlFor="cat2">Earbuds (18)</label>
                         </div>
                         <div>
                             <input type="checkbox" id="cat3" className={styles.checkbox} />
-                            <label for="cat3">Speakers (16)</label>
+                            <label htmlFor="cat3">Speakers (16)</label>
                         </div>
                         <div>
                             <input type="checkbox" id="cat4" className={styles.checkbox} />
-                            <label for="cat4">Microphones (9)</label>
+                            <label htmlFor="cat4">Microphones (9)</label>
                         </div>
                         <div>
                             <input type="checkbox" id="cat5" className={styles.checkbox} />
-                            <label for="cat5">Accessories (32)</label>
+                            <label htmlFor="cat5">Accessories (32)</label>
                         </div>
                     </div>
                 </div>
@@ -56,24 +56,24 @@ export default function Shop() {
                     <h4>Brands</h4>
                     <div>
                         <div>
-                            <input type="checkbox" id="brand1" checked className={styles.checkbox} />
-                            <label for="brand1">Quantum (12)</label>
+                            <input type="checkbox" id="brand1"  className={styles.checkbox} />
+                            <label htmlFor="brand1">Quantum (12)</label>
                         </div>
                         <div>
                             <input type="checkbox" id="brand2" className={styles.checkbox} />
-                            <label for="brand2">Nexus (9)</label>
+                            <label htmlFor="brand2">Nexus (9)</label>
                         </div>
                         <div className="flex items-center">
                             <input type="checkbox" id="brand3" className={styles.checkbox} />
-                            <label for="brand3">Vortex (14)</label>
+                            <label htmlFor="brand3">Vortex (14)</label>
                         </div>
                         <div>
                             <input type="checkbox" id="brand4" className={styles.checkbox} />
-                            <label for="brand4">Nova (8)</label>
+                            <label htmlFor="brand4">Nova (8)</label>
                         </div>
                         <div>
                             <input type="checkbox" id="brand5" className={styles.checkbox} />
-                            <label for="brand5">Prism (6)</label>
+                            <label htmlFor="brand5">Prism (6)</label>
                         </div>
                     </div>
                 </div>
@@ -81,20 +81,20 @@ export default function Shop() {
                     <h4>Features</h4>
                     <div>
                         <div>
-                            <input type="checkbox" id="feature1" checked className={styles.checkbox} />
-                            <label for="feature1">Wireless</label>
+                            <input type="checkbox" id="feature1"  className={styles.checkbox} />
+                            <label htmlFor="feature1">Wireless</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="feature2" checked className={styles.checkbox} />
-                            <label for="feature2">Noise Cancellation</label>
+                            <input type="checkbox" id="feature2"  className={styles.checkbox} />
+                            <label htmlFor="feature2">Noise Cancellation</label>
                         </div>
                         <div>
                             <input type="checkbox" id="feature3" className={styles.checkbox} />
-                            <label for="feature3">Voice Assistant</label>
+                            <label htmlFor="feature3">Voice Assistant</label>
                         </div>
                         <div>
                             <input type="checkbox" id="feature4" className={styles.checkbox} />
-                            <label for="feature4">Water Resistant</label>
+                            <label htmlFor="feature4">Water Resistant</label>
                         </div>
                     </div>
                 </div>
@@ -210,9 +210,9 @@ export default function Shop() {
                             </div>
                         </div>
                     </div>
-                    <div className="product-card compact">
+                    <div className={`${styles["product-card"]} ${styles.compact}`}>
                         <div>
-                            <div className="product-image">
+                            <div className={styles["product-image"]}>
                                 <img src="https://public.readdy.ai/ai/img_res/1cd5c502d60757d7b9a0ff181d52eee8.jpg"
                                     alt="Vortex Controller" />
                             </div>
@@ -224,11 +224,11 @@ export default function Shop() {
                                     <i className="ri-eye-line text-white"></i>
                                 </div>
                             </div>
-                            <div className="sticker purple">BEST SELLER</div>
+                            <div className={`${styles.sticker} ${styles.purple}`}>BEST SELLER</div>
                         </div>
                         <div>
-                            <div className="item-stars">
-                                <div className="star-icons">
+                            <div className={styles["item-stars"]}>
+                                <div className={styles["star-icons"]}>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
@@ -240,9 +240,9 @@ export default function Shop() {
                             <h3>Vortex Pro Controller</h3>
                             <p>Haptic feedback with customizable RGB lighting</p>
                             <div>
-                                <div className="price">
-                                    <span className="current-price">$179.99</span>
-                                    <span className="previous-price">$219.99</span>
+                                <div className={styles["price"]}>
+                                    <span className={styles["current-price"]}>$179.99</span>
+                                    <span className={styles["previous-price"]}>$219.99</span>
                                 </div>
                                 <button>
                                     <i className="ri-shopping-cart-line"></i>
