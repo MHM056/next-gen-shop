@@ -77,6 +77,7 @@ export default function AdminPage() {
                         </div>
                     </div>
                 </div> */}
+
                 <div className={styles["orders-and-products"]}>
                     <div className={styles["recent-orders"]}>
                         <div className={styles["recent-orders-title"]}>
