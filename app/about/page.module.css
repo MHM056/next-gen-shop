@@ -1,0 +1,178 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hero-section {
+    background: url('https://public.readdy.ai/ai/img_res/1cd20f210a7471c9605fadedb9502475.jpg') center/cover no-repeat;
+    position: relative;
+    padding: 8rem 1.5rem 6rem;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(to right, #00F0FF, #9D4EDD);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Info Section */
+.info-section {
+    padding: 4rem 1.5rem;
+}
+
+.two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .two-columns {
+        flex-direction: row;
+    }
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+}
+
+/* Team */
+.team-section {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(to bottom, #0A0A0F, #1A1A2E);
+}
+
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p:last-child {
+    color: white;
+}
+
+.team-member .role {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animations */
+.hero-title,
+.hero-subtitle {
+    animation: fadeInUp 1s ease-out;
+}
+
+.section-title {
+    animation: fadeInUp 1s ease-out;
+}
+
+.glass-box {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.team-member {
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+}
+
+.team-grid .team-member:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.team-grid .team-member:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.team-grid .team-member:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.team-grid .team-member:nth-child(4) {
+    animation-delay: 0.8s;
+}
