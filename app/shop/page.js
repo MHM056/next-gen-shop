@@ -131,7 +131,7 @@ export default function Shop() {
                 </div>
 
                 <div className={styles["product-section"]}>
-                    <div className={styles.compact}>
+                    <div className={`${styles["product-card"]} ${styles.compact}`}>
                         <div>
                             <div className={styles["product-image"]}>
                                 <img src="https://public.readdy.ai/ai/img_res/1751672930ac06d29d69edf72b188796.jpg"
@@ -145,11 +145,11 @@ export default function Shop() {
                                     <i className="ri-eye-line text-white"></i>
                                 </div>
                             </div>
-                            <div className="sticker">NEW</div>
+                            <div className={styles.sticker}>NEW</div>
                         </div>
                         <div>
-                            <div className="item-stars">
-                                <div className="star-icons">
+                            <div className={styles["item-stars"]}>
+                                <div className={styles["star-icons"]}>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
@@ -161,9 +161,9 @@ export default function Shop() {
                             <h3>Quantum Earbuds Pro</h3>
                             <p>True wireless with spatial audio and noise cancellation</p>
                             <div>
-                                <div className="price">
-                                    <span className="current-price">$249.99</span>
-                                    <span className="previous-price">$299.99</span>
+                                <div className={styles.price}>
+                                    <span className={styles["current-price"]}>$249.99</span>
+                                    <span className={styles["previous-price"]}>$299.99</span>
                                 </div>
                                 <button>
                                     <i className="ri-shopping-cart-line"></i>
@@ -171,9 +171,9 @@ export default function Shop() {
                             </div>
                         </div>
                     </div>
-                    <div className="product-card compact">
+                    <div className={`${styles["product-card"]} ${styles.compact}`}>
                         <div>
-                            <div className="product-image">
+                            <div className={styles["product-image"]}>
                                 <img src="https://public.readdy.ai/ai/img_res/bab19f27bb366a49d4071caf9c574811.jpg"
                                     alt="Nexus Watch" />
                             </div>
@@ -188,8 +188,8 @@ export default function Shop() {
                             {/* <!-- <div>NEW</div> --> */}
                         </div>
                         <div>
-                            <div className="item-stars">
-                                <div className="star-icons">
+                            <div className={styles["item-stars"]}>
+                                <div className={styles["star-icons"]}>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
@@ -201,8 +201,8 @@ export default function Shop() {
                             <h3>Nexus Smartwatch X2</h3>
                             <p>Holographic display with health monitoring</p>
                             <div>
-                                <div className="price">
-                                    <span className="current-price">$399.99</span>
+                                <div className={styles["price"]}>
+                                <span className={styles["current-price"]}>$399.99</span>
                                 </div>
                                 <button>
                                     <i className="ri-shopping-cart-line"></i>
@@ -250,9 +250,9 @@ export default function Shop() {
                             </div>
                         </div>
                     </div>
-                    <div className="product-card compact">
+                    <div className={`${styles["product-card"]} ${styles.compact}`}>
                         <div>
-                            <div className="product-image">
+                            <div className={styles["product-image"]}>
                                 <img src="https://public.readdy.ai/ai/img_res/9be19a26d3db56501ebaeb06250b1884.jpg"
                                     alt="Prism AR Glasses" />
                             </div>
@@ -264,11 +264,11 @@ export default function Shop() {
                                     <i className="ri-eye-line text-white"></i>
                                 </div>
                             </div>
-                            <div className="sticker">LIMITED</div>
+                            <div className={styles.sticker}>LIMITED</div>
                         </div>
                         <div>
-                            <div className="item-stars">
-                                <div className="star-icons">
+                            <div className={styles["item-stars"]}>
+                                <div className={styles["star-icons"]}>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
@@ -280,8 +280,8 @@ export default function Shop() {
                             <h3>Prism AR Glasses</h3>
                             <p>Augmented reality with holographic interface</p>
                             <div>
-                                <div className="price">
-                                    <span className="current-price">$599.99</span>
+                                <div className={styles["price"]}>
+                                    <span className={styles["current-price"]}>$599.99</span>
                                 </div>
                                 <button>
                                     <i className="ri-shopping-cart-line"></i>
@@ -289,9 +289,9 @@ export default function Shop() {
                             </div>
                         </div>
                     </div>
-                    <div className="product-card compact">
+                    <div className={`${styles["product-card"]} ${styles.compact}`}>
                         <div>
-                            <div className="product-image">
+                            <div className={styles["product-image"]}>
                                 <img src="https://public.readdy.ai/ai/img_res/e75b8b0f83b4645838809162da803e75.jpg"
                                     alt="Echo Speaker" />
                             </div>
@@ -305,8 +305,8 @@ export default function Shop() {
                             </div>
                         </div>
                         <div>
-                            <div className="item-stars">
-                                <div className="star-icons">
+                            <div className={styles["item-stars"]}>
+                                <div className={styles["star-icons"]}>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
@@ -318,9 +318,9 @@ export default function Shop() {
                             <h3>Echo Quantum Speaker</h3>
                             <p>360° spatial audio with voice control</p>
                             <div>
-                                <div className="price">
-                                    <span className="current-price">$199.99</span>
-                                    <span className="previous-price">$249.99</span>
+                                <div className={styles["price"]}>
+                                    <span className={styles["current-price"]}>$199.99</span>
+                                    <span className={styles["previous-price"]}>$249.99</span>
                                 </div>
                                 <button>
                                     <i className="ri-shopping-cart-line"></i>
@@ -328,9 +328,9 @@ export default function Shop() {
                             </div>
                         </div>
                     </div>
-                    <div className="product-card compact">
+                    <div className={`${styles["product-card"]} ${styles.compact}`}>
                         <div>
-                            <div className="product-image">
+                            <div className={styles["product-image"]}>
                                 <img src="https://public.readdy.ai/ai/img_res/bdd7a8f163a2826e991ddaedf74286a8.jpg"
                                     alt="Vortex Mouse" />
                             </div>
@@ -342,11 +342,11 @@ export default function Shop() {
                                     <i className="ri-eye-line text-white"></i>
                                 </div>
                             </div>
-                            <div className="sticker purple">POPULAR</div>
+                            <div className={`${styles.sticker} ${styles.purple}`}>POPULAR</div>
                         </div>
                         <div>
-                            <div className="item-stars">
-                                <div className="star-icons">
+                            <div className={styles["item-stars"]}>
+                                <div className={styles["star-icons"]}>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
                                     <i className="ri-star-fill"></i>
@@ -358,8 +358,8 @@ export default function Shop() {
                             <h3>Vortex Precision Mouse</h3>
                             <p>16K DPI with customizable weights</p>
                             <div>
-                                <div className="price">
-                                    <span className="current-price">$129.99</span>
+                                <div className={styles["price"]}>
+                                    <span className={styles["current-price"]}>$129.99</span>
                                 </div>
                                 <button>
                                     <i className="ri-shopping-cart-line"></i>
