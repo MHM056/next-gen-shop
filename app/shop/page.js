@@ -369,10 +369,10 @@ export default function Shop() {
                     </div>
                 </div>
                 {/* <!-- Pagination --> */}
-                <div className="pagination">
+                <div className={styles.pagination}>
                     <div>
                         <button><i className="ri-arrow-left-s-line"></i></button>
-                        <button className="selected-page">1</button>
+                        <button className={styles["selected-page"]}>1</button>
                         <button>2</button>
                         <button>3</button>
                         <button><i className="ri-more-line"></i></button>
