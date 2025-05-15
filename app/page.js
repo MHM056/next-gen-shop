@@ -20,7 +20,7 @@ export default function Home() {
                     <p>Experience next-generation e-commerce with our futuristic platform. Discover products that define
                         tomorrow, today.
                     </p>
-                    <a href="/shop" className={styles["cyan-btn"]}>Shop Now</a>
+                    <Link href="/shop" className={styles["cyan-btn"]}>Shop Now</Link>
                     <a href="/explore" className={styles["explore-btn"]}>Explore AR</a>
                 </div>
                 <div className={styles["item-preview"]}>
