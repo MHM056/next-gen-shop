@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -8,11 +9,11 @@ export default function Header() {
                     <span>Next</span><span>Gen</span>
                 </div>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/shop">Shop</a></li>
-                    <li><a href="/collections">Collections</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/shop">Shop</Link></li>
+                    <li><Link href="/collections">Collections</Link></li>
+                    <li><Link href="/about">About</Link></li>
+                    <li><Link href="/contact">Contact</Link></li>
                 </ul>
             </nav>
             <div className={styles["user-nav"]}>
