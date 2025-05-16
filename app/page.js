@@ -8,7 +8,8 @@ export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <img
+                <Image
+                    fill
                     className={styles["main-background"]}
                     src="https://public.readdy.ai/ai/img_res/1cd20f210a7471c9605fadedb9502475.jpg"
                     alt="Main Background"
@@ -24,7 +25,10 @@ export default function Home() {
                     <a href="/explore" className={styles["explore-btn"]}>Explore AR</a>
                 </div>
                 <div className={styles["item-preview"]}>
-                    <img
+                    <Image
+                        width={50}
+                        height={50}
+                        unoptimized
                         className={styles["preview-image"]}
                         src="https://public.readdy.ai/ai/img_res/a8dc01dfcfc98e07358a749458fa22b7.jpg"
                         alt="Futuristic Headphones"
