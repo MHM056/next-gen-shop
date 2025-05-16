@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./FeaturedProducts.module.css";
 
 export default function FeaturedProducts() {
@@ -172,7 +173,7 @@ export default function FeaturedProducts() {
                 </div>
             </div>
             <div className={styles["view-products"]}>
-                <button>View All Products</button>
+                <Link href="/shop"><button>View All Products</button></Link>
             </div>
         </section>
     );
