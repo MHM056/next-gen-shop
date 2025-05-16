@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'public.readdy.ai',
+        pathname: '/ai/img_res/**',
+      },
+    ],
+  },
+};
 
 export default nextConfig;
