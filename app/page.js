@@ -10,8 +10,9 @@ export default function Home() {
             <main className={styles.main}>
                 <Image
                     fill
+                    unoptimized
                     className={styles["main-background"]}
-                    src="https://public.readdy.ai/ai/img_res/1cd20f210a7471c9605fadedb9502475.jpg"
+                    src="/images/background.jpg"
                     alt="Main Background"
                 />
                 <div className={styles.description}>
@@ -22,7 +23,7 @@ export default function Home() {
                         tomorrow, today.
                     </p>
                     <Link href="/shop" className={styles["cyan-btn"]}>Shop Now</Link>
-                    <a href="/explore" className={styles["explore-btn"]}>Explore AR</a>
+                    <Link href="/explore" className={styles["explore-btn"]}>Explore AR</Link>
                 </div>
                 <div className={styles["item-preview"]}>
                     <Image
@@ -30,7 +31,7 @@ export default function Home() {
                         height={50}
                         unoptimized
                         className={styles["preview-image"]}
-                        src="https://public.readdy.ai/ai/img_res/a8dc01dfcfc98e07358a749458fa22b7.jpg"
+                        src="/images/headphones.jpg"
                         alt="Futuristic Headphones"
                     />
                 </div>
