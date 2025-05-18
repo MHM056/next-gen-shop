@@ -74,6 +74,7 @@
     background-color: rgba(0, 238, 255, 0.116);
     transition: 0.2s ease-in;
 }
+
 .item-preview {
     width: 50%;
     display: flex;
