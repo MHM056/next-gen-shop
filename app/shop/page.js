@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import styles from "./page.module.css";
+import allItems from "@/all-items";
+import ItemCard from "@/components/item-card/ItemCard";
 
 export default function Shop() {
     const [price, setPrice] = useState(500);
@@ -35,7 +37,7 @@ export default function Shop() {
                             <label htmlFor="cat1">Headphones (24)</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="cat2"  className={styles.checkbox} />
+                            <input type="checkbox" id="cat2" className={styles.checkbox} />
                             <label htmlFor="cat2">Earbuds (18)</label>
                         </div>
                         <div>
@@ -56,7 +58,7 @@ export default function Shop() {
                     <h4>Brands</h4>
                     <div>
                         <div>
-                            <input type="checkbox" id="brand1"  className={styles.checkbox} />
+                            <input type="checkbox" id="brand1" className={styles.checkbox} />
                             <label htmlFor="brand1">Quantum (12)</label>
                         </div>
                         <div>
@@ -81,11 +83,11 @@ export default function Shop() {
                     <h4>Features</h4>
                     <div>
                         <div>
-                            <input type="checkbox" id="feature1"  className={styles.checkbox} />
+                            <input type="checkbox" id="feature1" className={styles.checkbox} />
                             <label htmlFor="feature1">Wireless</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="feature2"  className={styles.checkbox} />
+                            <input type="checkbox" id="feature2" className={styles.checkbox} />
                             <label htmlFor="feature2">Noise Cancellation</label>
                         </div>
                         <div>
@@ -131,242 +133,7 @@ export default function Shop() {
                 </div>
 
                 <div className={styles["product-section"]}>
-                    <div className={`${styles["product-card"]} ${styles.compact}`}>
-                        <div>
-                            <div className={styles["product-image"]}>
-                                <img src="https://public.readdy.ai/ai/img_res/1751672930ac06d29d69edf72b188796.jpg"
-                                    alt="Quantum Earbuds" />
-                            </div>
-                            <div>
-                                <div>
-                                    <i className="ri-heart-line text-white"></i>
-                                </div>
-                                <div>
-                                    <i className="ri-eye-line text-white"></i>
-                                </div>
-                            </div>
-                            <div className={styles.sticker}>NEW</div>
-                        </div>
-                        <div>
-                            <div className={styles["item-stars"]}>
-                                <div className={styles["star-icons"]}>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-half-fill"></i>
-                                </div>
-                                <p>(128)</p>
-                            </div>
-                            <h3>Quantum Earbuds Pro</h3>
-                            <p>True wireless with spatial audio and noise cancellation</p>
-                            <div>
-                                <div className={styles.price}>
-                                    <span className={styles["current-price"]}>$249.99</span>
-                                    <span className={styles["previous-price"]}>$299.99</span>
-                                </div>
-                                <button>
-                                    <i className="ri-shopping-cart-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${styles["product-card"]} ${styles.compact}`}>
-                        <div>
-                            <div className={styles["product-image"]}>
-                                <img src="https://public.readdy.ai/ai/img_res/bab19f27bb366a49d4071caf9c574811.jpg"
-                                    alt="Nexus Watch" />
-                            </div>
-                            <div>
-                                <div>
-                                    <i className="ri-heart-line text-white"></i>
-                                </div>
-                                <div>
-                                    <i className="ri-eye-line text-white"></i>
-                                </div>
-                            </div>
-                            {/* <!-- <div>NEW</div> --> */}
-                        </div>
-                        <div>
-                            <div className={styles["item-stars"]}>
-                                <div className={styles["star-icons"]}>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-half-fill"></i>
-                                </div>
-                                <p>(94)</p>
-                            </div>
-                            <h3>Nexus Smartwatch X2</h3>
-                            <p>Holographic display with health monitoring</p>
-                            <div>
-                                <div className={styles["price"]}>
-                                <span className={styles["current-price"]}>$399.99</span>
-                                </div>
-                                <button>
-                                    <i className="ri-shopping-cart-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${styles["product-card"]} ${styles.compact}`}>
-                        <div>
-                            <div className={styles["product-image"]}>
-                                <img src="https://public.readdy.ai/ai/img_res/1cd5c502d60757d7b9a0ff181d52eee8.jpg"
-                                    alt="Vortex Controller" />
-                            </div>
-                            <div>
-                                <div>
-                                    <i className="ri-heart-line text-white"></i>
-                                </div>
-                                <div>
-                                    <i className="ri-eye-line text-white"></i>
-                                </div>
-                            </div>
-                            <div className={`${styles.sticker} ${styles.purple}`}>BEST SELLER</div>
-                        </div>
-                        <div>
-                            <div className={styles["item-stars"]}>
-                                <div className={styles["star-icons"]}>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-half-fill"></i>
-                                </div>
-                                <p>(256)</p>
-                            </div>
-                            <h3>Vortex Pro Controller</h3>
-                            <p>Haptic feedback with customizable RGB lighting</p>
-                            <div>
-                                <div className={styles["price"]}>
-                                    <span className={styles["current-price"]}>$179.99</span>
-                                    <span className={styles["previous-price"]}>$219.99</span>
-                                </div>
-                                <button>
-                                    <i className="ri-shopping-cart-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${styles["product-card"]} ${styles.compact}`}>
-                        <div>
-                            <div className={styles["product-image"]}>
-                                <img src="https://public.readdy.ai/ai/img_res/9be19a26d3db56501ebaeb06250b1884.jpg"
-                                    alt="Prism AR Glasses" />
-                            </div>
-                            <div>
-                                <div>
-                                    <i className="ri-heart-line text-white"></i>
-                                </div>
-                                <div>
-                                    <i className="ri-eye-line text-white"></i>
-                                </div>
-                            </div>
-                            <div className={styles.sticker}>LIMITED</div>
-                        </div>
-                        <div>
-                            <div className={styles["item-stars"]}>
-                                <div className={styles["star-icons"]}>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-half-fill"></i>
-                                </div>
-                                <p>(76)</p>
-                            </div>
-                            <h3>Prism AR Glasses</h3>
-                            <p>Augmented reality with holographic interface</p>
-                            <div>
-                                <div className={styles["price"]}>
-                                    <span className={styles["current-price"]}>$599.99</span>
-                                </div>
-                                <button>
-                                    <i className="ri-shopping-cart-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${styles["product-card"]} ${styles.compact}`}>
-                        <div>
-                            <div className={styles["product-image"]}>
-                                <img src="https://public.readdy.ai/ai/img_res/e75b8b0f83b4645838809162da803e75.jpg"
-                                    alt="Echo Speaker" />
-                            </div>
-                            <div>
-                                <div>
-                                    <i className="ri-heart-line text-white"></i>
-                                </div>
-                                <div>
-                                    <i className="ri-eye-line text-white"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className={styles["item-stars"]}>
-                                <div className={styles["star-icons"]}>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-half-fill"></i>
-                                </div>
-                                <p>(89)</p>
-                            </div>
-                            <h3>Echo Quantum Speaker</h3>
-                            <p>360° spatial audio with voice control</p>
-                            <div>
-                                <div className={styles["price"]}>
-                                    <span className={styles["current-price"]}>$199.99</span>
-                                    <span className={styles["previous-price"]}>$249.99</span>
-                                </div>
-                                <button>
-                                    <i className="ri-shopping-cart-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${styles["product-card"]} ${styles.compact}`}>
-                        <div>
-                            <div className={styles["product-image"]}>
-                                <img src="https://public.readdy.ai/ai/img_res/bdd7a8f163a2826e991ddaedf74286a8.jpg"
-                                    alt="Vortex Mouse" />
-                            </div>
-                            <div>
-                                <div>
-                                    <i className="ri-heart-line text-white"></i>
-                                </div>
-                                <div>
-                                    <i className="ri-eye-line text-white"></i>
-                                </div>
-                            </div>
-                            <div className={`${styles.sticker} ${styles.purple}`}>POPULAR</div>
-                        </div>
-                        <div>
-                            <div className={styles["item-stars"]}>
-                                <div className={styles["star-icons"]}>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-fill"></i>
-                                    <i className="ri-star-half-fill"></i>
-                                </div>
-                                <p>(112)</p>
-                            </div>
-                            <h3>Vortex Precision Mouse</h3>
-                            <p>16K DPI with customizable weights</p>
-                            <div>
-                                <div className={styles["price"]}>
-                                    <span className={styles["current-price"]}>$129.99</span>
-                                </div>
-                                <button>
-                                    <i className="ri-shopping-cart-line"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    {allItems.map((item) => <ItemCard key={item.title} item={item} size="small" />)}
                 </div>
                 {/* <!-- Pagination --> */}
                 <div className={styles.pagination}>
