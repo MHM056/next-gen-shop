@@ -30,25 +30,25 @@ export default function About() {
                     <p className={`${styles.subtitle} ${styles.center}`}>A group of innovators, designers, and tech enthusiasts.</p>
                     <div className={styles["team-grid"]}>
                         <div className={`${styles["team-member"]} ${styles["glass-box"]}`}>
-                            <img src="images/member1.jpg" alt="Alex Nova" />
+                            <img src="images/team/member.png" alt="Alex Nova" />
                             <h4>Alex Nova</h4>
                             <p className={styles["role"]}>Founder & CEO</p>
                             <p>Visionary leading our journey toward the future of shopping.</p>
                         </div>
                         <div className={`${styles["team-member"]} ${styles["glass-box"]}`}>
-                            <img src="images/member2.jpg" alt="Jordan Tech" />
+                            <img src="images/team/member.png" alt="Jordan Tech" />
                             <h4>Jordan Tech</h4>
                             <p className={styles["role"]}>CTO</p>
                             <p>Architect of our AR and data-analytics platforms.</p>
                         </div>
                         <div className={`${styles["team-member"]} ${styles["glass-box"]}`}>
-                            <img src="images/member3.jpg" alt="Sam Prism" />
+                            <img src="images/team/member.png" alt="Sam Prism" />
                             <h4>Sam Prism</h4>
                             <p className={styles["role"]}>Design Lead</p>
                             <p>Crafts the neon-glow, glassmorphic UI that defines our look.</p>
                         </div>
                         <div className={`${styles["team-member"]} ${styles["glass-box"]}`}>
-                            <img src="images/member4.jpg" alt="Taylor Wave" />
+                            <img src="images/team/member.png" alt="Taylor Wave" />
                             <h4>Taylor Wave</h4>
                             <p className={styles["role"]}>Head of Marketing</p>
                             <p>Spreads our vision across communities worldwide.</p>
