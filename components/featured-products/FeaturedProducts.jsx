@@ -1,5 +1,5 @@
 import Link from "next/link";
-import items from "@/dummy-items";
+import items from "@/dummy-content/dummy-items";
 import ItemCard from "../item-card/ItemCard";
 import styles from "./FeaturedProducts.module.css";
 

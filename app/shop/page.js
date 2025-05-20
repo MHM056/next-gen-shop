@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./page.module.css";
-import allItems from "@/all-items";
+import allItems from "@/dummy-content/all-items";
 import ItemCard from "@/components/item-card/ItemCard";
 
 export default function Shop() {
