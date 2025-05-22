@@ -1,0 +1,98 @@
+.bg {
+    padding: 2em;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.background {
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.05);
+    width: 30%;
+    align-self: center;
+    padding: 1em 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.form,
+.form input {
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    background-color: #07070c9b;
+}
+
+.form input {
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    font-size: 16px;
+    color: cyan;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    opacity: 0.8;
+    width: 60%
+}
+
+.form input:active,
+.form input:focus {
+    border: 1px solid #00F0FF;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+    transition: 0.2s ease-in;
+}
+
+.form input:hover {
+    border-color: cyan;
+    transition: 0.3s ease-in;
+}
+
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+.form h1 {
+    font-size: 24px;
+    padding: 1em 0;
+    color: cyan;
+}
+
+.form p {
+    color: cyan;
+    font-size: 14px;
+    align-self: left;
+}
+
+.form a {
+    text-decoration: none;
+    color: white;
+    padding-left: 1em;
+}
+
+.form button {
+    background-color: cyan;
+    border: none;
+    margin: 1em 0;
+    padding: 0.5em 2em;
+    border-radius: 1em;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.form button:hover {
+   background-color: rgba(0, 255, 255, 0.657);
+   transition: 0.2s ease;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 100px;
+}
