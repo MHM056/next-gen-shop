@@ -1,15 +1,29 @@
-.bg {
-    padding: 2em;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.background {
+.hero-section {
+    background: url('https://public.readdy.ai/ai/img_res/1cd20f210a7471c9605fadedb9502475.jpg') center/cover no-repeat;
+    position: relative;
+    padding: 2em;
+    text-align: center;
+}
+
+.hero-section .overlay {
     position: absolute;
-    height: 450px;
-    width: 100%;
-    opacity: 0.4;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {
@@ -17,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.05);
-    width: 30%;
+    width: 50%;
     align-self: center;
     padding: 1em 0;
     backdrop-filter: blur(10px);
@@ -75,17 +89,19 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     padding-left: 1em;
-    cursor:default;
+    cursor: default;
 }
+
 .form a:hover {
     color: cyan;
     transition: 0.3s ease;
 }
+
 .form button {
     background-color: cyan;
     border: none;
     margin: 1em 0;
-    width: 200px;
+    width: 60%;
     padding: 0.5em 2em;
     border-radius: 1em;
     font-size: 16px;
@@ -93,11 +109,11 @@
 }
 
 .form button:hover {
-   background-color: rgba(0, 255, 255, 0.657);
-   transition: 0.2s ease;
+    background-color: rgba(0, 255, 255, 0.657);
+    transition: 0.2s ease;
 }
 
 .logo {
     border-radius: 50%;
-    height: 100px;
+    height: 80px;
 }
