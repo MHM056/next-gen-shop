@@ -25,9 +25,15 @@ const userSchema = new mongoose.Schema({
             message: "Password must contain only letters and digits"
         }
     },
-    items: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Item"
+    role: {
+        type: String,
+        enum: ["user", "moderator", "admin"],
+        default: "user"
+    },
+    orders: [{
+        orderId: { type: mongoose.Schema.Types.ObjectId, ref: "Order" },
+        date: Date,
+        status: String
     }]
 }, {
     timestamps: true
