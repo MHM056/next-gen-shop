@@ -73,7 +73,7 @@ const itemSchema = new mongoose.Schema({
             required: true,
             validate: {
                 validator: function (v) {
-                    return v >= 1 && v <=5;
+                    return v >= 1 && v <= 5;
                 },
                 message: "Rating must be between 1 and 5"
             }
@@ -84,6 +84,14 @@ const itemSchema = new mongoose.Schema({
             maxlength: [100, "Comment must be no longer than 100 characters"]
         }
     }],
+    reviewCount: {
+        type: Number,
+        default: 0
+    },
+    averageRating: {
+        type: Number,
+        default: 0
+    },
     isFeatured: {
         type: Boolean,
         default: false
