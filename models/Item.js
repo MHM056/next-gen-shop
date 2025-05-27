@@ -98,3 +98,5 @@ const itemSchema = new mongoose.Schema({
     },
     timestamps: true
 });
+
+export default mongoose.models.Item || mongoose.model("Item", itemSchema);
