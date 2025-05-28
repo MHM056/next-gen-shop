@@ -34,6 +34,16 @@ const userSchema = new mongoose.Schema({
         orderId: { type: mongoose.Schema.Types.ObjectId, ref: "Order" },
         date: Date,
         status: String
+    }],
+    cart: [{
+        itemId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Item"
+        },
+        quantity: {
+            type: Number,
+            default: 1
+        }
     }]
 }, {
     timestamps: true
