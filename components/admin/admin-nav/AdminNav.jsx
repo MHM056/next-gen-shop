@@ -4,8 +4,7 @@ export default function AdminNav() {
     return (
         <nav className={styles["admin-nav"]}>
             <div>
-                <button><i className="ri-close-line"></i></button>
-                <span className={styles.title}>Admin Panel</span>
+                <span className={styles.title}>Admin Dashboard</span>
             </div>
             <div>
                 <div className={styles["admin-logout"]}>
