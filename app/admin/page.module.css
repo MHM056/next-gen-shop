@@ -2,68 +2,6 @@
     padding: 0 1em;
 }
 
-.admin nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1em 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.401);
-}
-
-.admin nav button {
-    background-color: transparent;
-    border-radius: 50%;
-    border: none;
-    height: 50px;
-    width: 60px;
-    text-align: center;
-}
-
-.title {
-    color: cyan;
-    font-size: 22px;
-    font-style: italic;
-}
-
-.admin-logout {
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-}
-
-.admin-logout i {
-    font-size: 18px;
-    padding-right: 0.5em;
-    color: white;
-}
-
-.admin-logout span,
-.admin nav div span {
-    color: white;
-}
-
-.logout {
-    background-color: rgba(0, 115, 115, 0.415);
-    border-radius: 0.5em;
-    width: 120px;
-    text-align: center;
-    padding: 0.5em;
-}
-
-.logout:hover {
-    background-color: rgba(0, 115, 115, 0.564);
-}
-
-.logout a {
-    color: cyan;
-}
-
-.logout i {
-    padding-right: 0.5em;
-    font-size: 18px;
-    color: cyan;
-}
-
 .general-view {
     display: flex;
     justify-content: space-between;
