@@ -215,10 +215,3 @@
     display: flex;
     gap: 0.8em;
 }
-
-.actions-and-activities {
-    padding: 2em 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-}

@@ -1,6 +1,5 @@
-import QuickActions from "@/components/admin/quick-actions/QuickActions";
 import styles from "./page.module.css";
-import RecentActivities from "@/components/admin/recent-activities/RecentActivities";
+import ActionsAndActivities from "@/components/admin/actions-and-activities/ActionsAndActivities";
 
 export default function AdminPage() {
     return (
@@ -190,10 +189,7 @@ export default function AdminPage() {
                         </div>
                     </div>
                 </div>
-                <div className={styles["actions-and-activities"]}>
-                    <QuickActions />
-                    <RecentActivities />
-                </div>
+                <ActionsAndActivities />
             </div>
         </section >
     );
