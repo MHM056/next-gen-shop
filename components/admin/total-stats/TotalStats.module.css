@@ -1,0 +1,42 @@
+.total-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    padding: 2em 0;
+}
+
+.total-card {
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    background-color: #07070C;
+    color: white;
+    border-radius: 1em;
+    width: 25%;
+    height: auto;
+    padding: 1em 2em;
+}
+
+.total-card h3 {
+    font-size: 20px;
+}
+
+.total-card i {
+    color: cyan;
+    padding: 0;
+}
+
+.total-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-sum {
+    color: cyan;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.sum-details {
+    font-size: 16px;
+    padding: 0;
+}
