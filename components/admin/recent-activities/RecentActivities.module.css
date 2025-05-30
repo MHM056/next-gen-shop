@@ -1,0 +1,52 @@
+.recent-activities {
+    width: 50%;
+    height: auto;
+    padding: 1.5em;
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    color: white;
+    background-color: #07070C;
+}
+
+.recent-activities i {
+    border-radius: 100%;
+    padding: 0.5em 0.5em;
+    font-size: 16px;
+}
+
+.activity {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding-top: 1em
+}
+
+.activity-title {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.activity-time {
+    font-size: 14px;
+}
+
+.order-icon {
+    background-color: #0D2D1C;
+    color: #21BE5B;
+}
+
+.user-icon {
+    background-color: #12203A;
+    color: #3A7FF1;
+}
+
+.discount-icon {
+    background-color: #382C0E;
+    color: #E9B208;
+}
+
+.product-icon {
+    background-color: #28173A;
+    color: #A855F7;
+}
