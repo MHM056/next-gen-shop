@@ -1,0 +1,6 @@
+.actions-and-activities {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
