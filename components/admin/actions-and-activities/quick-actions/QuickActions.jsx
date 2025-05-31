@@ -1,6 +1,12 @@
+"use client";
+import { useState } from "react";
 import styles from "./QuickActions.module.css";
+import Modal from "../../shared/Modal";
+import AddUserForm from "@/components/forms/add-user-form/AddUserForm";
 
 export default function QuickActions() {
+    const [showAddUserForm, setShowAddUserForm] = useState(false);
+
     return (
         <div className={styles["quick-actions"]}>
             <div>
@@ -13,7 +19,7 @@ export default function QuickActions() {
                         <h4>Add Product</h4>
                         <p>Create a new product listing</p>
                     </button>
-                    <button>
+                    <button onClick={() => setShowAddUserForm(true)}>
                         <i className="ri-user-add-line text-primary ri-2x mb-2"></i>
                         <h4>Add User</h4>
                         <p>Create a new user account</p>
@@ -32,6 +38,12 @@ export default function QuickActions() {
                     </button>
                 </div>
             </div>
+
+            {showAddUserForm && (
+                <Modal onClose={() => setShowAddUserForm(false)}>
+                    <AddUserForm onClose={() => setShowAddUserForm(false)} />
+                </Modal>
+            )}
         </div>
     );
 }
