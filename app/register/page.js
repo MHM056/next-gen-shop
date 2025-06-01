@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 
 export default function Register() {
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [showRepeatPassword, setShowRepeatPassword] = useState(false);
     const router = useRouter();
 
     async function registerHandler(e) {
@@ -18,6 +20,9 @@ export default function Register() {
         const repeatPassword = formData.get('repeatPassword');
 
         try {
+            if (password !== repeatPassword) {
+                throw new Error("Password missmatch");
+            }
             await registerUser({ email, password, repeatPassword });
             router.push('/');
         } catch (err) {
@@ -34,9 +39,31 @@ export default function Register() {
                         <img src="/images/Logo.png" className={styles.logo} />
                     </div>
                     <h1>Register</h1>
-                    <input name="email" type="text" placeholder="Email" />
-                    <input name="password" type="password" placeholder="Password" />
-                    <input name="repeatPassword" type="password" placeholder="Repeat Password" />
+                        <input name="email" type="text" placeholder="Email" required />
+                    <div className={styles["input-wrapper"]}>
+                        <input
+                            name="password"
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Password"
+                            required
+                        />
+                        <i className={`ri-eye-${showPassword ? "off-line" : "line"} ${styles["eye-icon"]}`}
+                            onClick={() => setShowPassword(prev => !prev)}
+                        ></i>
+                    </div>
+
+                    <div className={styles["input-wrapper"]}>
+                        <input
+                            name="repeatPassword"
+                            type={showRepeatPassword ? "text" : "password"}
+                            placeholder="Repeat Password"
+                            required
+                        />
+                        <i className={`ri-eye-${showRepeatPassword ? "off-line" : "line"} ${styles["eye-icon"]}`}
+                            onClick={() => setShowRepeatPassword(prev => !prev)}
+                        ></i>
+                    </div>
+
                     {error && <p>{error}</p>}
                     <p>Already registered? <Link href="/login">Login</Link></p>
                     <button>Register</button>

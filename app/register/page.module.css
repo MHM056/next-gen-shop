@@ -117,3 +117,28 @@
     border-radius: 50%;
     height: 80px;
 }
+
+.input-wrapper {
+    position: relative;
+    width: 60%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 2.5em;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: cyan;
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+.eye-icon:hover {
+    opacity: 1;
+}
