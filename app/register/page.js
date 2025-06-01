@@ -4,11 +4,13 @@ import styles from "./page.module.css";
 import { useState } from "react";
 import { registerUser } from "@/lib/api/userAuth";
 import { useRouter } from "next/navigation";
+import validateRegisterData from "@/lib/utils/validateData";
 
 export default function Register() {
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [showRepeatPassword, setShowRepeatPassword] = useState(false);
+    const [creatingUser, setCreatingUser] = useState(false);
     const router = useRouter();
 
     async function registerHandler(e) {
@@ -20,9 +22,8 @@ export default function Register() {
         const repeatPassword = formData.get('repeatPassword');
 
         try {
-            if (password !== repeatPassword) {
-                throw new Error("Password missmatch");
-            }
+            validateRegisterData({ email, password, repeatPassword });
+            setCreatingUser(true);
             await registerUser({ email, password, repeatPassword });
             router.push('/');
         } catch (err) {
@@ -39,7 +40,7 @@ export default function Register() {
                         <img src="/images/Logo.png" className={styles.logo} />
                     </div>
                     <h1>Register</h1>
-                        <input name="email" type="text" placeholder="Email" required />
+                    <input name="email" type="text" placeholder="Email" required />
                     <div className={styles["input-wrapper"]}>
                         <input
                             name="password"
@@ -66,7 +67,7 @@ export default function Register() {
 
                     {error && <p>{error}</p>}
                     <p>Already registered? <Link href="/login">Login</Link></p>
-                    <button>Register</button>
+                    <button>{!creatingUser ? "Register" : "Creating User"}</button>
                 </form>
             </div>
         </div>
