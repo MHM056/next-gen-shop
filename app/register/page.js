@@ -67,7 +67,7 @@ export default function Register() {
 
                     {error && <p>{error}</p>}
                     <p>Already registered? <Link href="/login">Login</Link></p>
-                    <button>{!creatingUser ? "Register" : "Creating User"}</button>
+                    <button>{creatingUser ? "Creating User..." : "Register"}</button>
                 </form>
             </div>
         </div>
