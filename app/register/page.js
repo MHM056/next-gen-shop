@@ -28,6 +28,7 @@ export default function Register() {
             router.push('/');
         } catch (err) {
             setError(err.message);
+            setCreatingUser(false);
         }
     }
 
