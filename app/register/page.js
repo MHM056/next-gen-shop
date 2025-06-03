@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { useState } from "react";
 import { registerUser } from "@/lib/api/userAuth";
 import { useRouter } from "next/navigation";
-import validateRegisterData from "@/lib/utils/validateData";
+import validateData from "@/lib/utils/validateData";
 
 export default function Register() {
     const [error, setError] = useState('');
@@ -22,8 +22,8 @@ export default function Register() {
         const repeatPassword = formData.get('repeatPassword');
 
         try {
-            validateRegisterData({ email, password, repeatPassword });
             setCreatingUser(true);
+            validateData.onRegister({ email, password, repeatPassword });
             await registerUser({ email, password, repeatPassword });
             router.push('/');
         } catch (err) {
