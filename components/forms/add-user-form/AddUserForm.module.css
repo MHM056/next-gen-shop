@@ -107,3 +107,7 @@
 .form-select option {
     color: cyan;
 }
+
+.form .error {
+    color: red;
+}
