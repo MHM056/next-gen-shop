@@ -96,7 +96,43 @@ const itemSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    images: [{
+        type: String,
+        required: [true, "Image is required"]
+    }],
+    manualLabel: {
+        type: String,
+        enum: ["NEW", "POPULAR", "LIMITED", null],
+        uppercase: true,
+        default: null
+    },
     timestamps: true
 });
+
+itemSchema.virtual("label").get(function () {
+    if (this.manualLabel) {
+        return this.manualLabel;
+    }
+
+    const ageInDays = (Date.now() - this.createdAt) / (1000 * 60 * 60 * 24);
+
+    if (ageInDays <= 30) {
+        return "NEW";
+    }
+
+    if (this.reviewCount >= 100 || this.rating >= 4.5) {
+        return "POPULAR";
+    }
+
+    if (this.quantity > 0 && this.quantity <= 10) {
+        return "LIMITED";
+    }
+
+    return null;
+});
+
+// Ensure virtuals are included in JSON
+productSchema.set('toJSON', { virtuals: true });
+productSchema.set('toObject', { virtuals: true });
 
 export default mongoose.models.Item || mongoose.model("Item", itemSchema);
