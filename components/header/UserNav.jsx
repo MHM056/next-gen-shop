@@ -1,27 +1,15 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./UserNav.module.css";
 import Link from "next/link";
 
 export default function UserNav() {
     const [showDropdown, setShowDropdown] = useState(false);
-    const dropdownRef = useRef(null);
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     function toggleDropdown() {
         setShowDropdown(prev => !prev);
     }
-
-    useEffect(() => {
-        function handleClickOutside(e) {
-            if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-                setShowDropdown(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
 
     return (
         <div className={styles["user-nav"]}>
@@ -30,10 +18,10 @@ export default function UserNav() {
                 <i className="ri-search-line"></i>
             </div>
             <div className={styles["icon-container"]}>
-                <i className="ri-user-line" onClick={toggleDropdown} ref={dropdownRef}></i>
+                <i className="ri-user-line" onClick={toggleDropdown}></i>
                 <span>1</span>
                 {showDropdown && (
-                    <div className={styles.dropdown}>
+                    <div className={styles.dropdown} onClick={toggleDropdown}>
                         {!isLoggedIn ? (
                             <>
                                 <Link href="/login"><i className="ri-login-circle-line" /> Login</Link>
