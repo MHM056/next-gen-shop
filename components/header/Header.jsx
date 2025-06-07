@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import NavLink from "./Navlink";
-import UserNav from "./UserNav";
+import UserNav from "./user-nav/UserNav";
 
 export default function Header() {
     return (
