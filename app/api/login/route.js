@@ -1,5 +1,6 @@
 import { login } from "@/lib/controllers/userController";
 import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 
 export async function POST(req) {
     try {
@@ -17,8 +18,8 @@ export async function POST(req) {
             maxAge: 60 * 60 * 24 * 7
         });
 
-        return Response.json(user, { status: 200 });
+        return NextResponse.json(user, { status: 200 });
     } catch (err) {
-        return Response.json({ error: err.message }, { status: 401 });
+        return NextResponse.json({ error: err.message }, { status: 401 });
     }
 }
