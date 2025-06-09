@@ -4,12 +4,15 @@ import styles from "./UserContainer.module.css";
 import { useEffect, useRef, useState } from "react";
 import { logoutUser } from "@/lib/api/userAuth";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function UserContainer() {
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
     const router = useRouter();
-    const isLoggedIn = true;
+    const { user, loading } = useAuth();
+    
+    const isLoggedIn = !!user;
 
     function toggleDropdown() {
         setShowDropdown(prev => !prev);
@@ -40,6 +43,8 @@ export default function UserContainer() {
         };
     }, []);
 
+    if (loading) return null;
+    
     return (
         <div className={styles["user-container"]} ref={dropdownRef}>
             <i className="ri-user-line" onClick={toggleDropdown}></i>
