@@ -5,6 +5,7 @@ import { useState } from "react";
 import { registerUser } from "@/lib/api/userAuth";
 import { useRouter } from "next/navigation";
 import validateData from "@/lib/utils/validateData";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function Register() {
     const [error, setError] = useState('');
@@ -12,6 +13,7 @@ export default function Register() {
     const [showRepeatPassword, setShowRepeatPassword] = useState(false);
     const [creatingUser, setCreatingUser] = useState(false);
     const router = useRouter();
+    const { setUser } = useAuth();
 
     async function registerHandler(e) {
         e.preventDefault();
@@ -24,7 +26,8 @@ export default function Register() {
         try {
             setCreatingUser(true);
             validateData.onRegister({ email, password, repeatPassword });
-            await registerUser({ email, password, repeatPassword });
+            const user = await registerUser({ email, password, repeatPassword });
+            setUser(user);
             router.push('/');
         } catch (err) {
             setError(err.message);
