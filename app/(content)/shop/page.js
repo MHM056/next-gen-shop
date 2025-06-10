@@ -3,10 +3,12 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import allItems from "@/dummy-content/all-items";
 import ItemCard from "@/components/item-card/ItemCard";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function Shop() {
     const [price, setPrice] = useState(500);
-
+    const { user } = useAuth();
+    
     return (
         <section className={styles["all-products"]}>
             {/* <!-- Filter Sidebar --> */}
@@ -125,10 +127,11 @@ export default function Shop() {
                             <button><i className="ri-layout-grid-line"></i></button>
                             <button><i className="ri-list-check"></i></button>
                         </div>
-
-                        <button className={styles["login-btn"]}>
-                            <i className="ri-login-circle-line"></i> Login
-                        </button>
+                        {!user && (
+                            <button className={styles["login-btn"]}>
+                                <i className="ri-login-circle-line"></i> Login
+                            </button>
+                        )}
                     </div>
                 </div>
 
