@@ -3,14 +3,14 @@ import Link from "next/link";
 import styles from "./UserContainer.module.css";
 import { useEffect, useRef, useState } from "react";
 import { logoutUser } from "@/lib/api/userAuth";
-import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/context/AuthContext";
+import { useRouter } from "next/navigation";
 
 export default function UserContainer() {
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
     const router = useRouter();
-    const { user, loading } = useAuth();
+    const { user, setUser } = useAuth();
     
     const isLoggedIn = !!user;
 
@@ -21,6 +21,7 @@ export default function UserContainer() {
     async function handleLogout() {
         try {
             await logoutUser();
+            setUser(null);
             router.push("/");
         } catch (err) {
             console.error(err.message);
@@ -43,8 +44,6 @@ export default function UserContainer() {
         };
     }, []);
 
-    if (loading) return null;
-    
     return (
         <div className={styles["user-container"]} ref={dropdownRef}>
             <i className="ri-user-line" onClick={toggleDropdown}></i>
