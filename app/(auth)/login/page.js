@@ -5,12 +5,14 @@ import { useState } from "react";
 import { loginUser } from "@/lib/api/userAuth";
 import { useRouter } from "next/navigation";
 import validateData from "@/lib/utils/validateData";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function Login() {
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [loggingUser, setLoggingUser] = useState(false);
     const router = useRouter();
+    const { user, setUser } = useAuth();
 
     async function loginHandler(e) {
         e.preventDefault();
@@ -22,7 +24,8 @@ export default function Login() {
         try {
             setLoggingUser(true);
             validateData.onLogin({ email, password });
-            await loginUser({ email, password });
+            const user = await loginUser({ email, password });
+            setUser(user);
             router.push('/');
         } catch (err) {
             setError(err.message);
