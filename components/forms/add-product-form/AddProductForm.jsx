@@ -40,8 +40,7 @@ export default function AddProductForm({ onClose }) {
                     <input name="price" type="number" placeholder="Price" step={10} min={10} max={90} required />
                     <div className={styles["select-container"]}>
                         <div className={styles.select}>
-
-                            <label for="category">Category</label>
+                            <label htmlFor="category">Category</label>
                             <select name="category" id="category" className={styles["form-select"]} placeholder="Category" required>
                                 <option value="headphones">Headphones</option>
                                 <option value="earbuds">Earbuds</option>
@@ -51,7 +50,7 @@ export default function AddProductForm({ onClose }) {
                             </select>
                         </div>
                         <div className={styles.select}>
-                            <label for="feature">Feature</label>
+                            <label htmlFor="feature">Feature</label>
                             <select name="feature" id="feature" className={styles["form-select"]} placeholder="Feature" required>
                                 <option value="wireless">Wireless</option>
                                 <option value="noise cancellation">Noise Cancellation</option>
@@ -60,8 +59,7 @@ export default function AddProductForm({ onClose }) {
                             </select>
                         </div>
                         <div className={styles.select}>
-
-                            <label for="label">Label</label>
+                            <label htmlFor="label">Label</label>
                             <select name="label" id="label" className={styles["form-select"]} placeholder="Label">
                                 <option value="none">None</option>
                                 <option value="new">NEW</option>

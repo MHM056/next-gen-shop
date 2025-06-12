@@ -46,6 +46,7 @@
 
 .form input:hover,
 .form-select:hover,
+.select:hover,
 .form textarea:hover {
     border-color: cyan;
     transition: 0.3s ease-in;
@@ -145,7 +146,7 @@
 }
 
 .form label {
-    color: cyan;
+    color: grey;
     padding: 0em 1em;
     border-radius: 1em;
 }
@@ -153,11 +154,11 @@
 .select {
     display: flex;
     justify-content: space-between;
-    gap: 4.7em;
+    gap: 4.9em;
     align-items: center;
     border: 1px solid rgba(128, 128, 128, 0.221);
     border-radius: 1em;
-    margin-bottom: 0.5em;
+    margin: 0.2em 0 0.5em 0;
 }
 
 .select select {
