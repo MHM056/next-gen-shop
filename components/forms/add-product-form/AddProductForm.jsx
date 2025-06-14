@@ -68,7 +68,13 @@ export default function AddProductForm({ onClose }) {
                             </select>
                         </div>
                     </div>
+                    <input name="discount" type="number" placeholder="Discount" min={10} max={80} />
+                    <div className={styles.isFeatured}>
+                        <input name="isFeatured" id="isFeatured" type="checkbox" className={styles.checkbox} />
+                        <label htmlFor="isFeatured">Is Featured?</label>
+                    </div>
                 </div>
+
                 <textarea name="description" id="description" placeholder="Description"></textarea>
             </div>
             {error && <p className={styles.error}>{error}</p>}
