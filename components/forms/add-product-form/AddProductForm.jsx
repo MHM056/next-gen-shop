@@ -11,18 +11,15 @@ export default function AddProductForm({ onClose }) {
     async function handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const email = formData.get("email");
-        const password = formData.get("password");
-        const role = formData.get("role");
-
+        const color = formData.get("color");
         try {
-            setCreatingProduct(true);
-            validateData.onAdd({ email, password, role });
-            await createUser({ email, password, role });
-            onClose();
+            // setCreatingProduct(true);
+            // validateData.onAdd({ email, password, role });
+            // await createUser({ email, password, role });
+            // onClose();
         } catch (err) {
-            setError(err.message);
-            setCreatingProduct(false);
+            // setError(err.message);
+            // setCreatingProduct(false);
         }
     };
 
@@ -37,7 +34,7 @@ export default function AddProductForm({ onClose }) {
                     <input name="title" type="text" placeholder="Title" required />
                     <input name="brand" type="text" placeholder="Brand" required />
                     <input name="quantity" type="number" placeholder="Quantity" min={1} max={100} required />
-                    <input name="price" type="number" placeholder="Price" step={10} min={10} max={90} required />
+                    <input name="price" type="number" placeholder="Price" step={10} min={10} max={9000} required />
                     <div className={styles["select-container"]}>
                         <div className={styles.select}>
                             <label htmlFor="category">Category</label>
@@ -73,6 +70,7 @@ export default function AddProductForm({ onClose }) {
                         <input name="isFeatured" id="isFeatured" type="checkbox" className={styles.checkbox} />
                         <label htmlFor="isFeatured">Is Featured?</label>
                     </div>
+                    <input type="color" name="color" id="" />
                 </div>
 
                 <textarea name="description" id="description" placeholder="Description"></textarea>
