@@ -56,21 +56,21 @@ export default function AddProductForm({ onClose }) {
                             </select>
                         </div>
                         <div className={styles.select}>
-                            <label htmlFor="label">Label</label>
-                            <select name="label" id="label" className={styles["form-select"]} placeholder="Label">
-                                <option value="none">None</option>
-                                <option value="new">NEW</option>
-                                <option value="popular">POPULAR</option>
-                                <option value="limited">LIMITED</option>
+                            <label htmlFor="label">Color</label>
+                            <select name="color" id="color" className={styles["form-select"]}>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
                             </select>
                         </div>
                     </div>
+                    <input name="image" type="text" placeholder="Image" required />
                     <input name="discount" type="number" placeholder="Discount" min={10} max={80} />
                     <div className={styles.isFeatured}>
                         <input name="isFeatured" id="isFeatured" type="checkbox" className={styles.checkbox} />
                         <label htmlFor="isFeatured">Is Featured?</label>
                     </div>
-                    <input type="color" name="color" id="" />
                 </div>
 
                 <textarea name="description" id="description" placeholder="Description"></textarea>
