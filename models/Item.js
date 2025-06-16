@@ -96,10 +96,10 @@ const itemSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    images: [{
+    images: {
         type: String,
         required: [true, "Image is required"]
-    }],
+    },
     manualLabel: {
         type: String,
         enum: ["NEW", "POPULAR", "LIMITED", null],
