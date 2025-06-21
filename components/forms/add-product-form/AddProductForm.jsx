@@ -11,9 +11,19 @@ export default function AddProductForm({ onClose }) {
     async function handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const price = formData.get("price");
-        console.log(price);
-        console.log(typeof price);
+        const itemData = {
+            title: formData.get("title"),
+            description: formData.get("description"),
+            brand: formData.get("brand"),
+            category: formData.get("category"),
+            feature: formData.get("feature"),
+            color: formData.get("color"),
+            price: formData.get("price"),
+            discount: formData.get("discount"),
+            quantity: formData.get("quantity"),
+            image: formData.get("image"),
+            isFeatured: formData.get("isFeatured")
+        }
         
         
         try {
