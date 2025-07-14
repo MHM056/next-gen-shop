@@ -2,8 +2,18 @@ import styles from "./page.module.css";
 import AdminNav from "@/components/admin/admin-nav/AdminNav";
 import TotalStats from "@/components/admin/total-stats/TotalStats";
 import ActionsAndActivities from "@/components/admin/actions-and-activities/ActionsAndActivities";
+import { useAuth } from "../context/AuthContext";
+import { cookies } from "next/headers";
+import { verifyJWT } from "@/lib/jwt";
 
-export default function AdminPage() {
+export default async function AdminPage() {
+
+    const token = await cookies().get("token")?.value;
+    const user = verifyJWT(token);
+
+    console.log(user);
+    
+
     return (
         <section className={styles.admin}>
             <AdminNav />
