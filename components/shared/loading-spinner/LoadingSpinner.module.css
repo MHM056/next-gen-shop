@@ -10,7 +10,7 @@
 }
 
 .spinny-loader {
-    display: block;
+    display:flex;
     position: relative;
     float: center;
     height: 140px;
@@ -65,7 +65,7 @@
 }
 
 .spinny-loader {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     bottom: 0;
@@ -73,6 +73,7 @@
     z-index: 99;
     background-color: transparent;
     opacity: 1;
+    padding: 10em;
 }
 
 .spinny-loader.error>div {
