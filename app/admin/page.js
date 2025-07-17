@@ -1,17 +1,17 @@
+"use client";
 import styles from "./page.module.css";
 import AdminNav from "@/components/admin/admin-nav/AdminNav";
 import TotalStats from "@/components/admin/total-stats/TotalStats";
 import ActionsAndActivities from "@/components/admin/actions-and-activities/ActionsAndActivities";
 import { useAuth } from "../context/AuthContext";
-import { cookies } from "next/headers";
-import { verifyJWT } from "@/lib/jwt";
+import LoadingSpinner from "@/components/shared/loading-spinner/LoadingSpinner";
 
-export default async function AdminPage() {
+export default function AdminPage() {
+    const { user, loading } = useAuth();
 
-    const token = await cookies().get("token")?.value;
-    const user = verifyJWT(token);
-
-    console.log(user);
+    if(loading) {
+       return <LoadingSpinner />;
+    }
     
 
     return (
