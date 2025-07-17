@@ -5,14 +5,16 @@ import { useEffect, useRef, useState } from "react";
 import { logoutUser } from "@/lib/api/userAuth";
 import { useAuth } from "@/app/context/AuthContext";
 import { useRouter } from "next/navigation";
+import AdminIcon from "@/components/admin/admin-icon/admin-icon";
 
 export default function UserContainer() {
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
     const router = useRouter();
     const { user, setUser } = useAuth();
-    
+
     const isLoggedIn = !!user;
+    const isAdmin = user?.role === "admin";
 
     function toggleDropdown() {
         setShowDropdown(prev => !prev);
@@ -45,26 +47,29 @@ export default function UserContainer() {
     }, []);
 
     return (
-        <div className={styles["user-container"]} ref={dropdownRef}>
-            <i className="ri-user-line" onClick={toggleDropdown}></i>
-            <span>1</span>
-            {showDropdown && (
-                <div className={styles.dropdown} onClick={toggleDropdown}>
-                    {!isLoggedIn ? (
-                        <>
-                            <Link href="/login"><i className="ri-login-circle-line" /> Login</Link>
-                            <Link href="/register"><i className="ri-user-add-line" /> Register</Link>
-                        </>
-                    ) : (
-                        <>
-                            <Link href="/profile"><i className="ri-user-line" /> My Profile</Link>
-                            <Link href="/orders"><i className="ri-lock-line" /> My Orders</Link>
-                            <Link href="/wishlist"><i className="ri-heart-line" /> Wishlist</Link>
-                            <Link href="" onClick={handleLogout}><i className="ri-logout-circle-line" /> Logout</Link>
-                        </>
-                    )}
-                </div>
-            )}
-        </div>
+        <>
+            {isAdmin && <AdminIcon />}
+            <div className={styles["user-container"]} ref={dropdownRef}>
+                <i className="ri-user-line" onClick={toggleDropdown}></i>
+                <span>1</span>
+                {showDropdown && (
+                    <div className={styles.dropdown} onClick={toggleDropdown}>
+                        {!isLoggedIn ? (
+                            <>
+                                <Link href="/login"><i className="ri-login-circle-line" /> Login</Link>
+                                <Link href="/register"><i className="ri-user-add-line" /> Register</Link>
+                            </>
+                        ) : (
+                            <>
+                                <Link href="/profile"><i className="ri-user-line" /> My Profile</Link>
+                                <Link href="/orders"><i className="ri-lock-line" /> My Orders</Link>
+                                <Link href="/wishlist"><i className="ri-heart-line" /> Wishlist</Link>
+                                <Link href="" onClick={handleLogout}><i className="ri-logout-circle-line" /> Logout</Link>
+                            </>
+                        )}
+                    </div>
+                )}
+            </div>
+        </>
     );
 }
