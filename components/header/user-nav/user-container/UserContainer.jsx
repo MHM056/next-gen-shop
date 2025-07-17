@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { logoutUser } from "@/lib/api/userAuth";
 import { useAuth } from "@/app/context/AuthContext";
 import { useRouter } from "next/navigation";
-import AdminIcon from "@/components/admin/admin-icon/admin-icon";
+import AdminIcon from "@/components/admin/admin-icon/AdminIcon";
 
 export default function UserContainer() {
     const [showDropdown, setShowDropdown] = useState(false);
