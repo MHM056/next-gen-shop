@@ -1,0 +1,27 @@
+.admin-icon {
+    position: fixed;
+    z-index: 1;
+    bottom: 40px;
+    right: 20px;
+    display: flex;
+}
+
+.a {
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+.a:hover {
+    transition: 0.3s ease;
+    background-color: rgba(0, 255, 255, 0.688);
+}
+
+.a i {
+    color: black;
+    padding: 1em 0.2em;
+    font-size: 42px;
+}
+
+.a i:hover {
+    color: black;
+}
