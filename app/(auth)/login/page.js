@@ -6,6 +6,7 @@ import { loginUser } from "@/lib/api/userAuth";
 import { useRouter } from "next/navigation";
 import validateData from "@/lib/utils/validateData";
 import { useAuth } from "@/app/context/AuthContext";
+import LoadingSpinner from "@/components/shared/loading-spinner/LoadingSpinner";
 
 export default function Login() {
     const [error, setError] = useState('');
@@ -34,32 +35,37 @@ export default function Login() {
     }
 
     return (
-        <div className={styles["hero-section"]}>
-            <div className={styles.overlay}></div>
-            <div className={styles.container}>
-                <form onSubmit={loginHandler} className={styles.form}>
-                    <div>
-                        <img src="/images/Logo.png" className={styles.logo} />
-                    </div>
-                    <h1>Login</h1>
-                    <input name="email" type="text" placeholder="Email" required />
-                    <div className={styles["input-wrapper"]}>
-                        <input
-                            name="password"
-                            type={showPassword ? "text" : "password"}
-                            placeholder="Password"
-                            required
-                        />
-                        <i className={`ri-eye-${showPassword ? "off-line" : "line"} ${styles["eye-icon"]}`}
-                            onClick={() => setShowPassword(prev => !prev)}
-                        ></i>
-                    </div>
+        <>
+            <div className={styles["hero-section"]}>
+                <div className={styles.overlay}></div>
+                <div className={styles.container}>
+                    {loggingUser ? (<LoadingSpinner />) : (
 
-                    {error && <p>{error}</p>}
-                    <p>Don't have an account? <Link href="/register">Register</Link></p>
-                    <button>{loggingUser ? "Logging in..." : "Login"}</button>
-                </form>
+                        <form onSubmit={loginHandler} className={styles.form}>
+                            <div>
+                                <img src="/images/Logo.png" className={styles.logo} />
+                            </div>
+                            <h1>Login</h1>
+                            <input name="email" type="text" placeholder="Email" required />
+                            <div className={styles["input-wrapper"]}>
+                                <input
+                                    name="password"
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="Password"
+                                    required
+                                />
+                                <i className={`ri-eye-${showPassword ? "off-line" : "line"} ${styles["eye-icon"]}`}
+                                    onClick={() => setShowPassword(prev => !prev)}
+                                ></i>
+                            </div>
+
+                            {error && <p>{error}</p>}
+                            <p>Don't have an account? <Link href="/register">Register</Link></p>
+                            <button>{loggingUser ? "Logging in..." : "Login"}</button>
+                        </form>
+                    )}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
