@@ -6,7 +6,7 @@ import { addUser } from "@/lib/controllers/userController";
 export async function POST(req) {
     try {
         const token = req.cookies.get("token")?.value;
-        const admin = verifyJWT(token);
+        const admin = await verifyJWT(token);
 
         if (!admin || admin.role !== "admin") {
             return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
