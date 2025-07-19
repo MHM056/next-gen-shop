@@ -11,7 +11,7 @@ export async function GET() {
     }
 
     try {
-        const decoded = verifyJWT(token);
+        const decoded = await verifyJWT(token);
         return NextResponse.json({ user: decoded }, { status: 200 });
     } catch (err) {
         return NextResponse.json({ user: null }, { status: 401 });
