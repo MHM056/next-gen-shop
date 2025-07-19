@@ -8,7 +8,7 @@ export async function POST(req) {
 
         const { token, ...user } = await login({ email, password });
 
-        const cookieStore =  await cookies();
+        const cookieStore = await cookies();
 
         cookieStore.set({
             name: "token",
