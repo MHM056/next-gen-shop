@@ -1,18 +1,18 @@
 "use client";
 import Link from "next/link";
-import styles from "./AdminIcon.module.css";
 import { usePathname } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
+import styles from "./AdminIcon.module.css";
 
 export default function AdminIcon() {
     const pathname = usePathname();
+    const { user, loading } = useAuth();
 
-    if (pathname === "/admin") {
-        return null;
-    }
+    if (pathname === "/admin") return null;
 
     return (
         <div className={styles["admin-icon"]}>
-            <Link href="/admin" className={styles.a}><i className="ri-admin-line"></i></Link>
+            <Link href="/admin"><i className="ri-admin-line"></i></Link>
         </div>
     );
 }

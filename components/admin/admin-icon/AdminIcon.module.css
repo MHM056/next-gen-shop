@@ -6,22 +6,22 @@
     display: flex;
 }
 
-.a {
+.admin-icon a {
     background-color: cyan;
     border-radius: 50%;
 }
 
-.a:hover {
+.admin-icon a:hover {
     transition: 0.3s ease;
     background-color: rgba(0, 255, 255, 0.688);
 }
 
-.a i {
+.admin-icon a i {
     color: black;
     padding: 1em 0.2em;
     font-size: 42px;
 }
 
-.a i:hover {
+.admin-icon a i:hover {
     color: black;
 }
