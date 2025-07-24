@@ -106,6 +106,7 @@ const itemSchema = new mongoose.Schema({
         uppercase: true,
         default: null
     },
+}, {
     timestamps: true
 });
 
@@ -132,7 +133,7 @@ itemSchema.virtual("label").get(function () {
 });
 
 // Ensure virtuals are included in JSON
-productSchema.set('toJSON', { virtuals: true });
-productSchema.set('toObject', { virtuals: true });
+itemSchema.set('toJSON', { virtuals: true });
+itemSchema.set('toObject', { virtuals: true });
 
 export default mongoose.models.Item || mongoose.model("Item", itemSchema);
