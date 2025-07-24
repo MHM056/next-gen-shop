@@ -1,8 +1,8 @@
 "use client";
-import { createUser } from "@/lib/api/userAuth";
 import styles from "./AddProductForm.module.css";
 import { useState } from "react";
 import validateData from "@/lib/utils/validateData";
+import { addProduct } from "@/lib/api/product";
 
 export default function AddProductForm({ onClose }) {
     const [error, setError] = useState('');
@@ -24,16 +24,15 @@ export default function AddProductForm({ onClose }) {
             image: formData.get("image"),
             isFeatured: formData.get("isFeatured")
         }
-        
-        
+
         try {
-            // setCreatingProduct(true);
-            // validateData.onAdd({ email, password, role });
-            // await createUser({ email, password, role });
-            // onClose();
+            setCreatingProduct(true);
+            validateData.onProductAdd(itemData);
+            await addProduct(itemData);
+            onClose();
         } catch (err) {
-            // setError(err.message);
-            // setCreatingProduct(false);
+            setError(err.message);
+            setCreatingProduct(false);
         }
     };
 
