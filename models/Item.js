@@ -23,17 +23,17 @@ const itemSchema = new mongoose.Schema({
     category: {
         type: String,
         required: [true, "Category is required"],
-        enum: ["Headphones", "Earbuds", "Speakers", "Microphones", "Accessories"]
+        enum: ["headphones", "earbuds", "speakers", "microphones", "accessories"]
     },
     feature: {
         type: String,
         required: [true, "Feature is required"],
-        enum: ["Wireless", "Noise Cancellation", "Voice Assistant", "Water Resistant"]
+        enum: ["wireless", "noise cancellation", "voice assistant", "water resistant"]
     },
-    colors: [{
+    color: {
         type: String,
         lowercase: true
-    }],
+    },
     quantity: {
         type: Number,
         required: [true, "Quantity is required"],
@@ -96,7 +96,7 @@ const itemSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    images: {
+    image: {
         type: String,
         required: [true, "Image is required"]
     },
