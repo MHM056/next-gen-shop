@@ -27,8 +27,11 @@ export default function AddProductForm({ onClose }) {
 
         try {
             setCreatingProduct(true);
-            validateData.onProductAdd(itemData);
-            await addProduct(itemData);
+            const validatedData = validateData.onProductAdd(itemData);
+            console.log("VALIDATE");
+            console.log(validatedData);
+            
+            await addProduct(validatedData);
             onClose();
         } catch (err) {
             setError(err.message);
