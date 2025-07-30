@@ -1,0 +1,51 @@
+.recent-orders {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    padding: 1.5em;
+    width: 80%;
+    background-color: #07070C;
+}
+
+.recent-orders table {
+    width: 100%;
+}
+
+.recent-orders th {
+    padding: 1em 0;
+    text-align: left;
+    color: #9CA3AF;
+}
+
+.recent-orders td {
+    border-top: 1px solid rgba(128, 128, 128, 0.221);
+    padding: 0.4em 1em 0.4em 0em;
+}
+
+.status {
+    border-radius: 1em;
+    font-size: 14px;
+    padding: 0.3em 1em;
+}
+
+.completed {
+    color: #34ff7f;
+    background-color: #0D2D1D;
+}
+
+.pending {
+    color: #ffc20b;
+    background-color: #352A0B;
+}
+
+.processing {
+    color: #3b86ff;
+    background-color: #12203B;
+}
+
+
+.recent-orders-title {
+    display: flex;
+    justify-content: space-between;
+}
+
