@@ -13,9 +13,6 @@ export async function POST(req) {
         }
 
         const itemData = await req.json();
-        console.log("API");
-        console.log(itemData);
-        
 
         const newData = await createProduct(itemData);
 
