@@ -1,0 +1,41 @@
+.top-products {
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    padding: 1.5em;
+    width: 40%;
+    background-color: #07070C;
+}
+
+.top-products img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.top-products-title,
+.item-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-card {
+    padding-top: 0.7em;
+}
+
+.item-card span {
+    color: cyan;
+}
+
+.item-card h4 {
+    font-size: 16px;
+}
+
+.item-card p {
+    font-size: 14px;
+}
+
+.item-card-name {
+    display: flex;
+    gap: 0.8em;
+}
