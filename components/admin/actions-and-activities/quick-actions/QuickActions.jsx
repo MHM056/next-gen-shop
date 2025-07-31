@@ -4,6 +4,7 @@ import styles from "./QuickActions.module.css";
 import Modal from "../../shared/Modal";
 import AddUserForm from "@/components/forms/add-user-form/AddUserForm";
 import AddProductForm from "@/components/forms/add-product-form/AddProductForm";
+import Link from "next/link";
 
 export default function QuickActions() {
     const [showAddUserForm, setShowAddUserForm] = useState(false);
@@ -33,11 +34,13 @@ export default function QuickActions() {
                         <h4>Add Discount</h4>
                         <p>Create a new discount code</p>
                     </button>
-                    <button>
-                        <i className="ri-settings-line text-primary ri-2x mb-2"></i>
-                        <h4>Settings</h4>
-                        <p>Manage store settings</p>
-                    </button>
+                    <Link href="/admin/userlist">
+                        <button>
+                            <i className="ri-settings-line text-primary ri-2x mb-2"></i>
+                            <h4>User Manager</h4>
+                            <p>Manage users and their roles</p>
+                        </button>
+                    </Link>
                 </div>
             </div>
 
