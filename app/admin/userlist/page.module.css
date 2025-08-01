@@ -1,0 +1,45 @@
+.userlist {
+    padding: 1em 3em;
+}
+
+.userlist table {
+    border: 2px solid rgba(128, 128, 128, 0.221);
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: #07070C;
+}
+
+.userlist thead {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.221);
+}
+
+.userlist tr {
+    color: white;
+}
+
+.userlist tbody tr:hover {
+    color: cyan;
+    transition: 0.3s ease;
+}
+
+.userlist th,
+.userlist td {
+    padding: 1em;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.221);
+}
+
+.userlist tbody tr :last-child {
+    padding: 0.5em;
+}
+
+.userlist td button {
+    padding: 0.5em 1.5em;
+    border: 2px solid cyan;
+    border-radius: 1em;
+    background-color: transparent;
+    color: cyan;
+    font-size: 16px;
+}
