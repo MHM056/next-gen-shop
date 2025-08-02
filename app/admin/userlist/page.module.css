@@ -12,17 +12,8 @@
     background-color: #07070C;
 }
 
-.userlist thead {
-    border-bottom: 2px solid rgba(128, 128, 128, 0.221);
-}
-
 .userlist tr {
     color: white;
-}
-
-.userlist tbody tr:hover {
-    color: cyan;
-    transition: 0.3s ease;
 }
 
 .userlist th,
@@ -36,10 +27,15 @@
 }
 
 .userlist td button {
-    padding: 0.5em 1.5em;
     border: 2px solid cyan;
     border-radius: 1em;
     background-color: transparent;
     color: cyan;
     font-size: 16px;
+}
+
+.userlist td button:hover {
+    border: 2px solid rgba(0, 255, 255, 0.758);
+    color: rgba(0, 255, 255, 0.758);
+    transition: 0.2s ease;
 }
