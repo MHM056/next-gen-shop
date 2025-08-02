@@ -17,7 +17,7 @@ export default function AdminPage() {
 
     return (
         <section className={styles.admin}>
-            <AdminNav adminName={user.email} />
+            <AdminNav adminName={user?.email} />
             <TotalStats />
             {/* <div className="sales-and-revenue">
                     <div>
