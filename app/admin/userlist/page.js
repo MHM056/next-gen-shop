@@ -1,11 +1,11 @@
 "use client";
 
-import { getUsers } from "@/lib/api/userAuth";
-import styles from "./page.module.css";
-import formatDate, { upperCase } from "@/lib/utils/formatData";
 import Link from "next/link";
-import LoadingSpinner from "@/components/shared/loading-spinner/LoadingSpinner";
+import styles from "./page.module.css";
 import { useEffect, useState } from "react";
+import { getUsers } from "@/lib/api/userAuth";
+import { formatDate, upperCase } from "@/lib/utils/formatData";
+import LoadingSpinner from "@/components/shared/loading-spinner/LoadingSpinner";
 
 export default function UserList() {
     const [userData, setUserData] = useState([]);
