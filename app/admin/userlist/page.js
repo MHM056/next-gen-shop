@@ -1,18 +1,28 @@
+"use client";
+
 import { getUsers } from "@/lib/api/userAuth";
 import styles from "./page.module.css";
+import formatDate, { upperCase } from "@/lib/utils/formatData";
+import Link from "next/link";
+import LoadingSpinner from "@/components/shared/loading-spinner/LoadingSpinner";
+import { useEffect, useState } from "react";
 
-export default async function UserList() {
+export default function UserList() {
+    const [userData, setUserData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    try {
-        const users = await getUsers();
-        console.log(users);
-        
-    } catch (error) {
-        console.log(error.message);
-        
-    }
-
-
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const users = await getUsers();
+                setUserData(users);
+                setLoading(false);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <div className={styles.userlist}>
@@ -21,28 +31,40 @@ export default async function UserList() {
             <table>
                 <thead>
                     <tr>
-                        <th>User Id</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Created At</th>
-                        <th>Rank</th>
                         <th>Profile</th>
-                        <th></th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>#ORD-7843</td>
-                        <td>Emily Parker</td>
-                        <td>Quantum Earbuds Pro</td>
-                        <td>$249.99</td>
-                        <td><span>Completed</span></td>
-                        <td>View</td>
-                        <td>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
 
+                    {loading
+                        ? (
+                            <tr>
+                                <td colSpan={5}>
+                                    <LoadingSpinner />
+                                </td>
+                            </tr>
+                        )
+                        : (
+                            userData.map((user) => (
+                                <tr key={user._id}>
+                                    <td>{user.email}</td>
+                                    <td>{upperCase(user.role)}</td>
+                                    <td>{formatDate(user.createdAt)}</td>
+                                    <td>
+                                        <Link href={`/profile/${user._id}`}>View</Link>
+                                    </td>
+                                    <td>
+                                        <button className={styles["edit-btn"]}>Edit</button>
+                                        <button>Delete</button>
+                                    </td>
+                                </tr>
+                            ))
+                        )
+                    }
                 </tbody>
             </table>
         </div>
