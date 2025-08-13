@@ -26,7 +26,7 @@ export default function UserList() {
 
     return (
         <div className={styles.userlist}>
-            <h1>Userlist</h1>
+            <h1><span className={styles["gradient-text"]}>Userlist</span></h1>
 
             <table>
                 <thead>
