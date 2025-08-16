@@ -31,11 +31,11 @@ export default function UserList() {
             <table>
                 <thead>
                     <tr>
+                        <th>Username</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Created At</th>
                         <th>Profile</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,15 +51,12 @@ export default function UserList() {
                         : (
                             userData.map((user) => (
                                 <tr key={user._id}>
+                                    <td>Username</td>
                                     <td>{user.email}</td>
                                     <td>{upperCase(user.role)}</td>
                                     <td>{formatDate(user.createdAt)}</td>
                                     <td>
-                                        <Link href={`/profile/${user._id}`}>View</Link>
-                                    </td>
-                                    <td>
-                                        <button className={styles["edit-btn"]}>Edit</button>
-                                        <button>Delete</button>
+                                        <button><Link href={`/user-profile/${user._id}`}>View</Link></button>
                                     </td>
                                 </tr>
                             ))
