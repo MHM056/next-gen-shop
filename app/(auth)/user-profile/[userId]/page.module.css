@@ -1,0 +1,15 @@
+.profile-header,
+.profile-content {
+    border: 1px solid rgba(128, 128, 128, 0.221);
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: #07070C;
+    margin: 1em;
+    color: white;
+}
+
+.profile-content form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
